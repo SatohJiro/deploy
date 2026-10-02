@@ -670,10 +670,13 @@ export default function MenuSection() {
                       CÀ PHÊ & CACAO
                     </h4>
                     <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cà phê đen phin</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>18k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cà phê sữa đá</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>22k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Bạc xỉu 3 tầng</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>25k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cacao nóng / đá</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>25k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cà phê đen (đá/nóng)</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>25k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cà phê sữa (đá/nóng)</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>29k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cafe muối</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>36k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Bạc xỉu (đá/nóng)</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>33k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cà phê kem</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>40k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cacao kem muối</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Coffee sữa mang đi</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>25k</strong></div>
                     </div>
                   </div>
 
@@ -682,38 +685,40 @@ export default function MenuSection() {
                       ĐÁ XAY KEM TƯƠI
                     </h4>
                     <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Cacao đá xay kem</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>30k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Matcha đá xay kem</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>32k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Oreo socola đá xay</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>35k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Việt quất đá xay</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>32k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Phúc bồn tử đá xay</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>32k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Chanh tuyết kem tươi</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>28k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Oreo đá xay kem tươi</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>45k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Chocolate đá xay</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>40k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Matcha đá xay kem</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>40k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Việt quất đá xay</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>40k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Chanh leo đá xay</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>40k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Khoai môn đá xay</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>40k</strong></div>
                     </div>
                   </div>
 
                   <div>
                     <h4 style={{ color: '#8b5a2b', fontSize: '1.05rem', fontWeight: 800, borderBottom: '1.5px solid #d4b895', paddingBottom: '4px', marginBottom: '8px' }}>
-                      SINH TỐ TRÁI CÂY
+                      TRÀ & TRÀ SỮA
                     </h4>
                     <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sinh tố Bơ Đắk Lắk</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>32k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sinh tố Mập đặc biệt</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sinh tố Mãng cầu</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>30k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sinh tố Xoài chín</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>28k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sinh tố Dâu tây</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>32k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Trà sữa kem trứng</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>40k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sữa tươi trân châu đường đen</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>35k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Trà đào cam sả</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Trà dâu xí muội</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Trà vải thanh mát</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>35k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Trà tắc mật ong trân châu</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
                     </div>
                   </div>
 
                   <div>
                     <h4 style={{ color: '#8b5a2b', fontSize: '1.05rem', fontWeight: 800, borderBottom: '1.5px solid #d4b895', paddingBottom: '4px', marginBottom: '8px' }}>
-                      SỮA CHUA & TRÀ SỮA
+                      SINH TỐ & GIẢI KHÁT
                     </h4>
                     <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sữa chua đánh đá</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>22k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sữa chua dừa non</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>28k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sữa chua mít hạt đác</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>30k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Trà sữa full thạch</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>28k</strong></div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Trà trái cây nhiệt đới</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>32k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sữa dừa lá nếp (Mới)</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sinh tố Bơ sầu riêng</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>45k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sinh tố Bơ sáp</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Sinh tố Dâu tây</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Chanh Tuyết mát lạnh</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>35k</strong></div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><span>Đá me hạt đác chanh dây</span><strong style={{ color: '#8b5a2b', minWidth: '32px', textAlign: 'right' }}>38k</strong></div>
                     </div>
                   </div>
                 </div>

@@ -402,7 +402,7 @@ export default function Hero() {
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <span style={{ color: '#e29d62', fontSize: '1.3rem', fontWeight: 800 }}>
-                      18.000đ
+                      25.000đ
                     </span>
                     <span style={{ display: 'block', color: '#8d786d', fontSize: '0.75rem' }}>kèm trà đá</span>
                   </div>
@@ -426,7 +426,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating Mini Card 1: Bạc Xỉu 3 Tầng */}
+            {/* Floating Mini Card 1: Bạc Xỉu */}
             <div
               className="float-element hero-float-card-1"
               style={{
@@ -457,22 +457,22 @@ export default function Hero() {
               >
                 <Image
                   src="/images/coffee-bac-xiu.jpg"
-                  alt="Bạc Xỉu 3 tầng"
+                  alt="Bạc Xỉu"
                   fill
                   style={{ objectFit: 'cover' }}
                 />
               </div>
               <div>
                 <span style={{ display: 'block', color: '#ffffff', fontSize: '0.88rem', fontWeight: 700 }}>
-                  Bạc Xỉu 3 Tầng
+                  Bạc Xỉu (Đá/Nóng)
                 </span>
                 <span style={{ color: '#e29d62', fontSize: '0.82rem', fontWeight: 600 }}>
-                  25.000đ • Món Bán Chạy
+                  33.000đ • Món Bán Chạy
                 </span>
               </div>
             </div>
 
-            {/* Floating Mini Card 2: Sinh Tố Bơ Đắk Lắk */}
+            {/* Floating Mini Card 2: Sinh Tố Bơ */}
             <div
               className="float-element hero-float-card-2"
               style={{
@@ -503,7 +503,7 @@ export default function Hero() {
                 }}
               >
                 <Image
-                  src="/images/drink-smoothie-coffee.jpg"
+                  src="/images/sinh-to-bo.jpg"
                   alt="Sinh tố bơ"
                   fill
                   style={{ objectFit: 'cover' }}
@@ -511,10 +511,10 @@ export default function Hero() {
               </div>
               <div>
                 <span style={{ display: 'block', color: '#ffffff', fontSize: '0.88rem', fontWeight: 700 }}>
-                  Sinh Tố Bơ Đắk Lắk
+                  Sinh Tố Bơ Sáp
                 </span>
                 <span style={{ color: '#86efac', fontSize: '0.82rem', fontWeight: 600 }}>
-                  32.000đ • Bơ sáp dẻo quánh
+                  38.000đ • Bơ sáp dẻo quánh
                 </span>
               </div>
             </div>

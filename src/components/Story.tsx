@@ -330,7 +330,7 @@ export default function Story() {
               Hào Sảng Chuẩn Vị Sài Gòn
             </h4>
             <p style={{ color: '#68564c', fontSize: '0.93rem', lineHeight: 1.65 }}>
-              Mức giá vô cùng bình dân chỉ từ 18.000đ - 38.000đ, trà đá mát lạnh châm không giới hạn,
+              Mức giá vô cùng bình dân chỉ từ 23.000đ - 45.000đ, trà đá mát lạnh châm không giới hạn,
               nhân viên vui vẻ niềm nở, chỗ giữ xe miễn phí an toàn chu đáo.
             </p>
           </div>

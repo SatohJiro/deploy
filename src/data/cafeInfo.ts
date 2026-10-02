@@ -17,7 +17,7 @@ export const CAFE_INFO = {
   email: "ongmapcoffee.tanbinh@gmail.com",
   openingHours: "06:00 - 22:30",
   openingHoursSchema: "Mo-Su 06:00-22:30",
-  priceRange: "18.000đ - 38.000đ",
+  priceRange: "23.000đ - 45.000đ",
   googleMapsUrl: "https://maps.google.com/?q=156+Đ.+Trần+Thị+Trọng,+Tân+Sơn,+Hồ+Chí+Minh,+Việt+Nam",
   googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9867963051406!2d106.634629!3d10.812328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752945dc5fef53%3A0xbcfdd50c76adbb5e!2zMTU2IMSQLiBUcuG6p24gVGjhu4sgVHLhu41uZywgUGjGsOG7nW5nIDE1LCBUw6JuIELDrG5oLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s",
   coordinates: {
