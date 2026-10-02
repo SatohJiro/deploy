@@ -256,70 +256,35 @@ export default function MenuSection() {
             className="menu-items-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
-              gap: '24px'
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 330px), 1fr))',
+              gap: '20px'
             }}
           >
             {filteredItems.map((item) => (
               <div
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
-                style={{
-                  backgroundColor: '#ffffff',
-                  borderRadius: '18px',
-                  border: '1.5px solid rgba(63, 34, 22, 0.08)',
-                  boxShadow: '0 4px 18px rgba(33, 16, 8, 0.04)',
-                  padding: '20px',
-                  display: 'flex',
-                  gap: '16px',
-                  transition: 'all 0.25s ease',
-                  cursor: 'pointer',
-                  position: 'relative',
-                  overflow: 'hidden'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-3px)';
-                  e.currentTarget.style.boxShadow = '0 10px 26px rgba(33, 16, 8, 0.1)';
-                  e.currentTarget.style.borderColor = 'rgba(200, 138, 88, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 18px rgba(33, 16, 8, 0.04)';
-                  e.currentTarget.style.borderColor = 'rgba(63, 34, 22, 0.08)';
-                }}
+                className="menu-card"
               >
                 {/* Thumbnail */}
-                <div
-                  style={{
-                    position: 'relative',
-                    width: '90px',
-                    height: '90px',
-                    borderRadius: '14px',
-                    overflow: 'hidden',
-                    flexShrink: 0,
-                    backgroundColor: '#f7e6d4',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}
-                >
+                <div className="menu-card-thumb">
                   {item.image ? (
                     <Image
                       src={item.image}
                       alt={item.name}
                       fill
-                      sizes="90px"
+                      sizes="80px"
                       style={{ objectFit: 'cover' }}
                     />
                   ) : (
                     <div style={{ color: '#c88a58' }}>
-                      <Coffee size={36} strokeWidth={1.5} />
+                      <Coffee size={32} strokeWidth={1.5} />
                     </div>
                   )}
                 </div>
 
                 {/* Info */}
-                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div className="menu-card-info">
                   <div>
                     {/* Tags (Clean typography) */}
                     <div style={{ display: 'flex', gap: '6px', marginBottom: '6px', flexWrap: 'wrap' }}>
@@ -370,48 +335,21 @@ export default function MenuSection() {
                       )}
                     </div>
 
-                    <h4
-                      style={{
-                        fontSize: '1.08rem',
-                        fontWeight: 700,
-                        color: '#1f110b',
-                        marginBottom: '4px',
-                        lineHeight: 1.3
-                      }}
-                    >
+                    <h4 className="menu-card-title">
                       {item.name}
                     </h4>
 
-                    <p
-                      style={{
-                        fontSize: '0.84rem',
-                        color: '#716157',
-                        lineHeight: 1.45,
-                        display: '-webkit-box',
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: 'vertical',
-                        overflow: 'hidden'
-                      }}
-                    >
+                    <p className="menu-card-desc">
                       {item.description}
                     </p>
                   </div>
 
-                  {/* Price */}
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      marginTop: '8px',
-                      paddingTop: '8px',
-                      borderTop: '1px dashed #ebdcd0'
-                    }}
-                  >
-                    <span style={{ fontSize: '1.18rem', fontWeight: 800, color: '#c88a58' }}>
+                  {/* Price & Free Tea Badge */}
+                  <div className="menu-card-price-row">
+                    <span className="menu-card-price">
                       {formatPrice(item.price)}
                     </span>
-                    <span style={{ fontSize: '0.78rem', color: '#9d8b80', fontWeight: 500 }}>
+                    <span className="menu-card-badge">
                       Kèm trà đá free
                     </span>
                   </div>
