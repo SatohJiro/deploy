@@ -586,25 +586,84 @@ export default function MenuSection() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Image */}
-            <div style={{ position: 'relative', width: '100%', height: '260px', backgroundColor: '#2c180f' }}>
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                height: '280px',
+                backgroundColor: '#160c07',
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
               {selectedItem.image ? (
-                <Image
-                  src={selectedItem.image}
-                  alt={selectedItem.name}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
+                <>
+                  {/* Atmospheric blurred ambient backdrop */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: '-20px',
+                      backgroundImage: `url(${selectedItem.image})`,
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      filter: 'blur(32px) brightness(0.4) saturate(1.3)',
+                      transform: 'scale(1.2)',
+                      zIndex: 1
+                    }}
+                  />
+                  {/* Soft radial vignette for high contrast */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'radial-gradient(circle at center, transparent 30%, rgba(15, 8, 4, 0.7) 100%)',
+                      zIndex: 2
+                    }}
+                  />
+                  {/* Sharp, uncropped, contained foreground drink */}
+                  <div
+                    style={{
+                      position: 'relative',
+                      zIndex: 3,
+                      height: '100%',
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      padding: '16px'
+                    }}
+                  >
+                    <img
+                      src={selectedItem.image}
+                      alt={selectedItem.name}
+                      style={{
+                        maxHeight: '248px',
+                        maxWidth: '85%',
+                        objectFit: 'contain',
+                        borderRadius: '16px',
+                        filter: 'drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55))'
+                      }}
+                    />
+                  </div>
+                </>
               ) : (
                 <div
                   style={{
                     display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
                     height: '100%',
-                    color: '#e29d62'
+                    color: '#e29d62',
+                    gap: '12px',
+                    position: 'relative',
+                    zIndex: 3
                   }}
                 >
-                  <Coffee size={64} />
+                  <Coffee size={56} />
+                  <span style={{ fontSize: '0.85rem', color: '#a87850', letterSpacing: '0.05em' }}>Ông Mập Coffee</span>
                 </div>
               )}
               <button
@@ -613,14 +672,19 @@ export default function MenuSection() {
                   position: 'absolute',
                   top: '16px',
                   right: '16px',
-                  width: '36px',
-                  height: '36px',
+                  zIndex: 10,
+                  width: '38px',
+                  height: '38px',
                   borderRadius: '50%',
-                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  backgroundColor: 'rgba(0, 0, 0, 0.65)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
                   color: '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center'
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  backdropFilter: 'blur(6px)',
+                  transition: 'background-color 0.2s, transform 0.15s'
                 }}
                 aria-label="Đóng"
               >
