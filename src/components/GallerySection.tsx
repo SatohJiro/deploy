@@ -66,77 +66,48 @@ export default function GallerySection() {
             flexWrap: 'wrap'
           }}
         >
-          <button
-            onClick={() => setFilter('all')}
-            style={{
-              padding: '10px 22px',
-              borderRadius: '9999px',
-              fontSize: '0.9rem',
-              fontWeight: 600,
-              backgroundColor: filter === 'all' ? '#1c0e08' : '#ffffff',
-              color: filter === 'all' ? '#ffffff' : '#3f2216',
-              border: filter === 'all' ? '1px solid #1c0e08' : '1px solid #ebdcd0',
-              boxShadow: filter === 'all' ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
-              transition: 'all 0.2s ease',
-              cursor: 'pointer'
-            }}
-          >
-            Tất Cả ({GALLERY_ITEMS.length})
-          </button>
-
-          <button
-            onClick={() => setFilter('space')}
-            style={{
-              padding: '10px 22px',
-              borderRadius: '9999px',
-              fontSize: '0.9rem',
-              fontWeight: 600,
-              backgroundColor: filter === 'space' ? '#1c0e08' : '#ffffff',
-              color: filter === 'space' ? '#ffffff' : '#3f2216',
-              border: filter === 'space' ? '1px solid #1c0e08' : '1px solid #ebdcd0',
-              boxShadow: filter === 'space' ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
-              transition: 'all 0.2s ease',
-              cursor: 'pointer'
-            }}
-          >
-            Không Gian Sân Vườn
-          </button>
-
-          <button
-            onClick={() => setFilter('drinks')}
-            style={{
-              padding: '10px 22px',
-              borderRadius: '9999px',
-              fontSize: '0.9rem',
-              fontWeight: 600,
-              backgroundColor: filter === 'drinks' ? '#1c0e08' : '#ffffff',
-              color: filter === 'drinks' ? '#ffffff' : '#3f2216',
-              border: filter === 'drinks' ? '1px solid #1c0e08' : '1px solid #ebdcd0',
-              boxShadow: filter === 'drinks' ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
-              transition: 'all 0.2s ease',
-              cursor: 'pointer'
-            }}
-          >
-            Thức Uống Thực Tế
-          </button>
-
-          <button
-            onClick={() => setFilter('night')}
-            style={{
-              padding: '10px 22px',
-              borderRadius: '9999px',
-              fontSize: '0.9rem',
-              fontWeight: 600,
-              backgroundColor: filter === 'night' ? '#1c0e08' : '#ffffff',
-              color: filter === 'night' ? '#ffffff' : '#3f2216',
-              border: filter === 'night' ? '1px solid #1c0e08' : '1px solid #ebdcd0',
-              boxShadow: filter === 'night' ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
-              transition: 'all 0.2s ease',
-              cursor: 'pointer'
-            }}
-          >
-            Không Gian Buổi Tối
-          </button>
+          {[
+            { id: 'all', label: `Tất Cả (${GALLERY_ITEMS.length})` },
+            { id: 'space', label: 'Không Gian Sân Vườn' },
+            { id: 'drinks', label: 'Thức Uống Thực Tế' },
+            { id: 'night', label: 'Không Gian Buổi Tối' },
+          ].map((tab) => {
+            const isActive = filter === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setFilter(tab.id as 'all' | 'space' | 'drinks' | 'night')}
+                style={{
+                  padding: '10px 22px',
+                  borderRadius: '9999px',
+                  fontSize: '0.9rem',
+                  fontWeight: 600,
+                  backgroundColor: isActive ? '#1c0e08' : '#ffffff',
+                  color: isActive ? '#ffffff' : '#3f2216',
+                  border: isActive ? '1.5px solid #1c0e08' : '1.5px solid #ebdcd0',
+                  boxShadow: isActive ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.borderColor = '#c88a58';
+                    e.currentTarget.style.backgroundColor = '#fbf8f3';
+                    e.currentTarget.style.color = '#1c0e08';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.borderColor = '#ebdcd0';
+                    e.currentTarget.style.backgroundColor = '#ffffff';
+                    e.currentTarget.style.color = '#3f2216';
+                  }
+                }}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
         </div>
 
         {/* Gallery Grid */}

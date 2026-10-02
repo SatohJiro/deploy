@@ -203,25 +203,76 @@ img {
 
 .btn-outline {
   background: transparent;
-  color: var(--espresso-800);
-  border: 1.5px solid var(--espresso-600);
+  color: var(--espresso-900);
+  border: 1.5px solid var(--amber-gold);
+  transition: var(--ease-smooth);
 }
 
 .btn-outline:hover {
-  background: var(--espresso-800);
-  color: var(--text-light);
+  background-color: var(--espresso-850) !important;
+  color: #ffffff !important;
+  border-color: var(--espresso-850) !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(28, 14, 8, 0.25);
+}
+
+.btn-outline:hover * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Dedicated warm wood / gold button for viewing original menu */
+.btn-wood-menu {
+  background-color: rgba(200, 138, 88, 0.08);
+  color: var(--espresso-900);
+  border: 1.5px solid var(--amber-gold);
+  transition: var(--ease-smooth);
+}
+
+.btn-wood-menu:hover {
+  background-color: var(--amber-gold) !important;
+  color: #ffffff !important;
+  border-color: var(--amber-gold) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 138, 88, 0.35);
+}
+
+.btn-wood-menu:hover * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.btn-outline-light {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f0e3db;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  transition: var(--ease-smooth);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+.btn-outline-light:hover * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 .btn-white {
   background: #ffffff;
   color: var(--espresso-900);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: var(--ease-smooth);
 }
 
 .btn-white:hover {
-  background: var(--amber-light);
+  background: var(--amber-light) !important;
+  color: var(--espresso-950) !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 /* Section Header Structure */

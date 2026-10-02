@@ -255,15 +255,13 @@ export default function Hero() {
 
               <a
                 href={`tel:${CAFE_INFO.phone}`}
-                className="btn"
+                className="btn btn-outline-light"
                 style={{
-                  color: '#f0e3db',
-                  padding: '13px 18px',
-                  fontSize: '0.94rem',
-                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                  padding: '14px 22px',
+                  fontSize: '0.96rem'
                 }}
               >
-                <Phone size={16} color="#e29d62" />
+                <Phone size={16} />
                 <span>{CAFE_INFO.phoneDisplay}</span>
               </a>
             </div>

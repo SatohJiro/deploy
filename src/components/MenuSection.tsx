@@ -61,16 +61,15 @@ export default function MenuSection() {
           <div style={{ marginTop: '18px' }}>
             <button
               onClick={() => setShowOriginalMenuModal(true)}
-              className="btn btn-outline"
+              className="btn btn-wood-menu"
               style={{
-                fontSize: '0.9rem',
-                padding: '9px 20px',
-                borderColor: '#c88a58',
-                color: '#2c180f'
+                fontSize: '0.92rem',
+                padding: '10px 24px',
+                cursor: 'pointer'
               }}
             >
-              <Eye size={16} color="#c88a58" />
-              <span>Xem Bảng Menu Gỗ Gốc Tại Quán</span>
+              <Eye size={17} />
+              <span>Xem Bảng Menu Gỗ Khắc Gốc Tại Quán</span>
             </button>
           </div>
         </div>
@@ -162,7 +161,20 @@ export default function MenuSection() {
                 border: filterBestSeller ? '1.5px solid #c88a58' : '1.5px solid #ebdcd0',
                 backgroundColor: filterBestSeller ? '#f7e6d4' : '#ffffff',
                 color: filterBestSeller ? '#2c180f' : '#5f4e44',
-                transition: 'all 0.2s ease'
+                transition: 'all 0.2s ease',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                if (!filterBestSeller) {
+                  e.currentTarget.style.borderColor = '#c88a58';
+                  e.currentTarget.style.backgroundColor = '#fbf8f3';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!filterBestSeller) {
+                  e.currentTarget.style.borderColor = '#ebdcd0';
+                  e.currentTarget.style.backgroundColor = '#ffffff';
+                }
               }}
             >
               <span>Chỉ hiện món Bán Chạy / Đặc Sản</span>
@@ -202,6 +214,18 @@ export default function MenuSection() {
                     border: isActive ? '1px solid #1c0e08' : '1px solid transparent',
                     boxShadow: isActive ? '0 4px 14px rgba(28, 14, 8, 0.2)' : 'none',
                     cursor: 'pointer'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.backgroundColor = '#ebe0d5';
+                      e.currentTarget.style.color = '#1c0e08';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.backgroundColor = '#f4ede2';
+                      e.currentTarget.style.color = '#3f2216';
+                    }
                   }}
                 >
                   {cat.label}
