@@ -273,21 +273,44 @@ export default function Hero() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '14px',
-                marginTop: '36px',
+                flexWrap: 'wrap',
+                gap: '8px 12px',
+                marginTop: '32px',
                 paddingTop: '20px',
                 borderTop: '1px solid rgba(255, 255, 255, 0.12)'
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="#fbbf24" color="#fbbf24" />
-                ))}
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  flexShrink: 0
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '3px', flexShrink: 0 }}>
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={16} fill="#fbbf24" color="#fbbf24" />
+                  ))}
+                </div>
+                <span
+                  style={{
+                    fontSize: '0.95rem',
+                    color: '#ffffff',
+                    fontWeight: 700,
+                    whiteSpace: 'nowrap'
+                  }}
+                >
+                  4.8 / 5.0
+                </span>
               </div>
-              <span style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: 600 }}>
-                4.8 / 5.0
-              </span>
-              <span style={{ fontSize: '0.86rem', color: '#bcaea4' }}>
+              <span
+                style={{
+                  fontSize: '0.86rem',
+                  color: '#bcaea4',
+                  lineHeight: 1.4
+                }}
+              >
                 • Khách hàng tin tưởng đánh giá tại khu vực Tân Bình
               </span>
             </div>
