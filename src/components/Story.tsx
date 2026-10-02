@@ -40,6 +40,7 @@ export default function Story() {
         >
           {/* Left Column: Image Collage */}
           <div
+            className="story-collage"
             style={{
               position: 'relative',
               display: 'grid',
@@ -49,6 +50,7 @@ export default function Story() {
           >
             {/* Image 1: Garden Patio */}
             <div
+              className="story-img story-img-1"
               style={{
                 position: 'relative',
                 height: '320px',
@@ -84,6 +86,7 @@ export default function Story() {
 
             {/* Image 2: Night Lanterns */}
             <div
+              className="story-img story-img-2"
               style={{
                 position: 'relative',
                 height: '320px',
@@ -212,7 +215,7 @@ export default function Story() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+            <div className="story-cta-group" style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
               <a href="#menu" className="btn btn-primary" style={{ padding: '12px 26px' }}>
                 Xem Menu Đồ Uống
               </a>
@@ -225,6 +228,7 @@ export default function Story() {
 
         {/* 3 Highlight Cards */}
         <div
+          className="story-highlight-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',

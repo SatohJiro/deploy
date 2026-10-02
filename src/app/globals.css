@@ -487,15 +487,44 @@ img {
 }
 
 @media (max-width: 640px) {
+  .story-collage {
+    gap: 12px !important;
+  }
+  .story-img-1,
+  .story-img-2 {
+    height: 220px !important;
+    margin-top: 0 !important;
+  }
   .story-badge {
-    padding: 10px 14px !important;
-    max-width: 90% !important;
+    padding: 8px 12px !important;
+    max-width: 82% !important;
+    border-radius: 12px !important;
   }
   .story-badge span:first-child {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
   }
   .story-badge span:last-child {
-    font-size: 0.75rem !important;
+    font-size: 0.72rem !important;
+  }
+  .story-cta-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  .story-cta-group .btn {
+    width: 100% !important;
+    text-align: center !important;
+    white-space: normal !important;
+    padding: 13px 20px !important;
+  }
+  .story-highlight-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .hero-pills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
   }
 }
 
@@ -503,6 +532,22 @@ img {
 @media (min-width: 992px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-card {
+    padding: 22px 16px !important;
+    border-radius: 18px !important;
+  }
+  .form-row-2col {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  .full-width-btn {
+    width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
   }
 }
 
@@ -514,6 +559,9 @@ img {
   .reviews-grid,
   .footer-grid {
     grid-template-columns: 1fr !important;
+  }
+  .btn {
+    white-space: normal !important;
   }
 }
 

@@ -56,6 +56,7 @@ export default function LocationContact() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {/* Info Box */}
             <div
+              className="contact-card"
               style={{
                 backgroundColor: '#fbf8f3',
                 borderRadius: '24px',
@@ -183,17 +184,18 @@ export default function LocationContact() {
                   href={CAFE_INFO.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary"
-                  style={{ width: '100%', padding: '14px', fontSize: '1rem' }}
+                  className="btn btn-primary full-width-btn"
+                  style={{ width: '100%', padding: '13px 16px', fontSize: '0.94rem' }}
                 >
                   <Navigation size={18} />
-                  <span>Mở Ứng Dụng Google Maps Chỉ Đường</span>
+                  <span>Chỉ Đường Bằng Google Maps</span>
                 </a>
               </div>
             </div>
 
             {/* Quick Reservation Form */}
             <div
+              className="contact-card"
               style={{
                 backgroundColor: '#ffffff',
                 borderRadius: '24px',
@@ -230,7 +232,7 @@ export default function LocationContact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                  <div className="form-row-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                     <div>
                       <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#3f2216', display: 'block', marginBottom: '4px' }}>
                         Tên của bạn *
@@ -275,7 +277,7 @@ export default function LocationContact() {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                  <div className="form-row-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                     <div>
                       <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#3f2216', display: 'block', marginBottom: '4px' }}>
                         Số lượng người
@@ -345,9 +347,10 @@ export default function LocationContact() {
 
                   <button
                     type="submit"
-                    className="btn btn-dark"
+                    className="btn btn-dark full-width-btn"
                     style={{
-                      padding: '12px',
+                      width: '100%',
+                      padding: '13px',
                       fontSize: '0.95rem',
                       marginTop: '6px'
                     }}

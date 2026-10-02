@@ -124,11 +124,11 @@ export default function Hero() {
             {/* Main Headline */}
             <h1
               style={{
-                fontSize: 'clamp(2.4rem, 5.5vw, 4rem)',
+                fontSize: 'clamp(1.85rem, 6.5vw, 3.8rem)',
                 color: '#ffffff',
                 fontFamily: 'var(--font-heading)',
                 fontWeight: 800,
-                lineHeight: 1.15,
+                lineHeight: 1.18,
                 marginBottom: '20px',
                 textShadow: '0 4px 20px rgba(0, 0, 0, 0.6)'
               }}
@@ -149,7 +149,7 @@ export default function Hero() {
             {/* Subtitle */}
             <p
               style={{
-                fontSize: 'clamp(1rem, 2vw, 1.15rem)',
+                fontSize: 'clamp(0.95rem, 2vw, 1.15rem)',
                 color: '#e0d2c8',
                 lineHeight: 1.7,
                 marginBottom: '32px',
@@ -163,9 +163,10 @@ export default function Hero() {
 
             {/* Highlights row */}
             <div
+              className="hero-pills-grid"
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 140px), 1fr))',
                 gap: '12px',
                 marginBottom: '36px'
               }}
