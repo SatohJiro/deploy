@@ -658,7 +658,7 @@ export default function MenuSection() {
                   ÔNG MẬP COFFEE
                 </h2>
                 <p style={{ fontSize: '0.88rem', color: '#68452b', fontWeight: 600 }}>
-                  156 Trần Thị Trọng, Tân Sơn, Tân Bình • ĐT: 0907.710.799
+                  156 Trần Thị Trọng, Tân Sơn, Tân Bình • ĐT: {CAFE_INFO.phoneDisplay} - {CAFE_INFO.altPhoneDisplay}
                 </p>
               </div>
 
