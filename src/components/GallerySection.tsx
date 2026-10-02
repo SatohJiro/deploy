@@ -2,9 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, X, ZoomIn, Camera, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
 import { GALLERY_ITEMS } from '@/data/galleryData';
-import { GalleryItem } from '@/types';
 
 export default function GallerySection() {
   const [filter, setFilter] = useState<'all' | 'space' | 'drinks' | 'night'>('all');
@@ -57,7 +56,7 @@ export default function GallerySection() {
           </p>
         </div>
 
-        {/* Filter Pills */}
+        {/* Clean Filter Pills */}
         <div
           style={{
             display: 'flex',
@@ -78,10 +77,11 @@ export default function GallerySection() {
               color: filter === 'all' ? '#ffffff' : '#3f2216',
               border: filter === 'all' ? '1px solid #1c0e08' : '1px solid #ebdcd0',
               boxShadow: filter === 'all' ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
-              transition: 'all 0.2s ease'
+              transition: 'all 0.2s ease',
+              cursor: 'pointer'
             }}
           >
-            Tất Cả Ảnh ({GALLERY_ITEMS.length})
+            Tất Cả ({GALLERY_ITEMS.length})
           </button>
 
           <button
@@ -95,10 +95,11 @@ export default function GallerySection() {
               color: filter === 'space' ? '#ffffff' : '#3f2216',
               border: filter === 'space' ? '1px solid #1c0e08' : '1px solid #ebdcd0',
               boxShadow: filter === 'space' ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
-              transition: 'all 0.2s ease'
+              transition: 'all 0.2s ease',
+              cursor: 'pointer'
             }}
           >
-            🌿 Không Gian Sân Vườn
+            Không Gian Sân Vườn
           </button>
 
           <button
@@ -112,10 +113,11 @@ export default function GallerySection() {
               color: filter === 'drinks' ? '#ffffff' : '#3f2216',
               border: filter === 'drinks' ? '1px solid #1c0e08' : '1px solid #ebdcd0',
               boxShadow: filter === 'drinks' ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
-              transition: 'all 0.2s ease'
+              transition: 'all 0.2s ease',
+              cursor: 'pointer'
             }}
           >
-            ☕ Thức Uống Thực Tế
+            Thức Uống Thực Tế
           </button>
 
           <button
@@ -129,10 +131,11 @@ export default function GallerySection() {
               color: filter === 'night' ? '#ffffff' : '#3f2216',
               border: filter === 'night' ? '1px solid #1c0e08' : '1px solid #ebdcd0',
               boxShadow: filter === 'night' ? '0 4px 12px rgba(28, 14, 8, 0.2)' : 'none',
-              transition: 'all 0.2s ease'
+              transition: 'all 0.2s ease',
+              cursor: 'pointer'
             }}
           >
-            🏮 Lung Linh Về Đêm
+            Không Gian Buổi Tối
           </button>
         </div>
 

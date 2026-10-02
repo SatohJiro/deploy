@@ -4,19 +4,11 @@ import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import {
   Search,
-  Coffee,
-  IceCream,
-  Apple,
-  Milk,
-  CupSoda,
-  GlassWater,
-  Sparkles,
-  Flame,
-  Award,
   Phone,
   Eye,
   X,
-  Check
+  Check,
+  Coffee
 } from 'lucide-react';
 import { MENU_ITEMS, MENU_CATEGORIES } from '@/data/menuData';
 import { CAFE_INFO } from '@/data/cafeInfo';
@@ -41,25 +33,6 @@ export default function MenuSection() {
       return matchCategory && matchSearch && matchBestSeller;
     });
   }, [activeCategory, searchQuery, filterBestSeller]);
-
-  const getCategoryIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Coffee':
-        return <Coffee size={18} />;
-      case 'IceCream':
-        return <IceCream size={18} />;
-      case 'Apple':
-        return <Apple size={18} />;
-      case 'Milk':
-        return <Milk size={18} />;
-      case 'CupSoda':
-        return <CupSoda size={18} />;
-      case 'GlassWater':
-        return <GlassWater size={18} />;
-      default:
-        return <Coffee size={18} />;
-    }
-  };
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('vi-VN').format(price) + 'đ';
@@ -97,7 +70,7 @@ export default function MenuSection() {
               }}
             >
               <Eye size={16} color="#c88a58" />
-              <span>Xem Bảng Menu Gỗ Khắc Gốc Tại Quán</span>
+              <span>Xem Bảng Menu Gỗ Gốc Tại Quán</span>
             </button>
           </div>
         </div>
@@ -192,13 +165,12 @@ export default function MenuSection() {
                 transition: 'all 0.2s ease'
               }}
             >
-              <Flame size={16} color={filterBestSeller ? '#dc2626' : '#8b796f'} />
               <span>Chỉ hiện món Bán Chạy / Đặc Sản</span>
               {filterBestSeller && <Check size={14} color="#2c180f" />}
             </button>
           </div>
 
-          {/* Category Tabs (Scrollable on Mobile) */}
+          {/* Clean Category Tabs (Pure, Elegant Typography) */}
           <div
             style={{
               display: 'flex',
@@ -219,24 +191,20 @@ export default function MenuSection() {
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
-                    gap: '8px',
-                    padding: '11px 20px',
+                    padding: '10px 20px',
                     borderRadius: '9999px',
                     fontSize: '0.92rem',
                     fontWeight: 600,
                     whiteSpace: 'nowrap',
-                    transition: 'all 0.25s ease',
+                    transition: 'all 0.2s ease',
                     backgroundColor: isActive ? '#1c0e08' : '#f4ede2',
                     color: isActive ? '#ffffff' : '#3f2216',
                     border: isActive ? '1px solid #1c0e08' : '1px solid transparent',
-                    boxShadow: isActive ? '0 4px 14px rgba(28, 14, 8, 0.25)' : 'none',
+                    boxShadow: isActive ? '0 4px 14px rgba(28, 14, 8, 0.2)' : 'none',
                     cursor: 'pointer'
                   }}
                 >
-                  <span style={{ color: isActive ? '#e29d62' : '#8b796f' }}>
-                    {getCategoryIcon(cat.icon)}
-                  </span>
-                  <span>{cat.label}</span>
+                  {cat.label}
                 </button>
               );
             })}
@@ -295,7 +263,7 @@ export default function MenuSection() {
                   e.currentTarget.style.borderColor = 'rgba(63, 34, 22, 0.08)';
                 }}
               >
-                {/* Thumbnail (if available) or Decorative Cup Box */}
+                {/* Thumbnail */}
                 <div
                   style={{
                     position: 'relative',
@@ -328,7 +296,7 @@ export default function MenuSection() {
                 {/* Info */}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div>
-                    {/* Tags */}
+                    {/* Tags (Clean typography) */}
                     <div style={{ display: 'flex', gap: '6px', marginBottom: '6px', flexWrap: 'wrap' }}>
                       {item.isBestSeller && (
                         <span
@@ -339,12 +307,10 @@ export default function MenuSection() {
                             color: '#b91c1c',
                             padding: '2px 8px',
                             borderRadius: '9999px',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '3px'
+                            letterSpacing: '0.3px'
                           }}
                         >
-                          <Flame size={11} /> Best Seller
+                          Bán Chạy
                         </span>
                       )}
                       {item.isSignature && (
@@ -356,12 +322,10 @@ export default function MenuSection() {
                             color: '#92400e',
                             padding: '2px 8px',
                             borderRadius: '9999px',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '3px'
+                            letterSpacing: '0.3px'
                           }}
                         >
-                          <Award size={11} /> Signature
+                          Đặc Sản Quán
                         </span>
                       )}
                       {item.isNew && (
@@ -373,12 +337,10 @@ export default function MenuSection() {
                             color: '#15803d',
                             padding: '2px 8px',
                             borderRadius: '9999px',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '3px'
+                            letterSpacing: '0.3px'
                           }}
                         >
-                          <Sparkles size={11} /> Mới
+                          Món Mới
                         </span>
                       )}
                     </div>
@@ -442,12 +404,12 @@ export default function MenuSection() {
               border: '1px dashed #ebdcd0'
             }}
           >
-            <Coffee size={48} color="#c88a58" style={{ margin: '0 auto 16px auto' }} />
+            <Coffee size={44} color="#c88a58" style={{ margin: '0 auto 16px auto' }} />
             <h3 style={{ fontSize: '1.3rem', color: '#2c180f', marginBottom: '8px' }}>
               Không tìm thấy món phù hợp với từ khóa &quot;{searchQuery}&quot;
             </h3>
             <p style={{ color: '#6e5d53', marginBottom: '18px' }}>
-              Vui lòng thử tìm kiếm với tên khác hoặc chọn lại tất cả danh mục.
+              Vui lòng thử tìm kiếm với tên khác hoặc chọn lại danh mục.
             </p>
             <button
               onClick={() => {
@@ -728,7 +690,7 @@ export default function MenuSection() {
             >
               <div style={{ textAlign: 'center', borderBottom: '2px dashed #8b5a2b', paddingBottom: '16px', marginBottom: '18px' }}>
                 <h2 style={{ fontSize: '1.8rem', fontWeight: 900, color: '#3f2216', letterSpacing: '1px' }}>
-                  ★ ÔNG MẬP COFFEE ★
+                  ÔNG MẬP COFFEE
                 </h2>
                 <p style={{ fontSize: '0.88rem', color: '#68452b', fontWeight: 600 }}>
                   156 Trần Thị Trọng, Tân Sơn, Tân Bình • ĐT: 0907.710.799
@@ -748,7 +710,7 @@ export default function MenuSection() {
               >
                 <div>
                   <h4 style={{ color: '#8b5a2b', fontSize: '1.05rem', fontWeight: 800, borderBottom: '1px solid #d4b895', paddingBottom: '4px', marginBottom: '8px' }}>
-                    ☕ CÀ PHÊ & CACAO
+                    CÀ PHÊ & CACAO
                   </h4>
                   <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Cà phê đen phin</span><strong>18k</strong></div>
@@ -760,7 +722,7 @@ export default function MenuSection() {
 
                 <div>
                   <h4 style={{ color: '#8b5a2b', fontSize: '1.05rem', fontWeight: 800, borderBottom: '1px solid #d4b895', paddingBottom: '4px', marginBottom: '8px' }}>
-                    🍧 ĐÁ XAY KEM TƯƠI
+                    ĐÁ XAY KEM TƯƠI
                   </h4>
                   <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Cacao đá xay kem</span><strong>30k</strong></div>
@@ -774,7 +736,7 @@ export default function MenuSection() {
 
                 <div>
                   <h4 style={{ color: '#8b5a2b', fontSize: '1.05rem', fontWeight: 800, borderBottom: '1px solid #d4b895', paddingBottom: '4px', marginBottom: '8px' }}>
-                    🥑 SINH TỐ TRÁI CÂY
+                    SINH TỐ TRÁI CÂY
                   </h4>
                   <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Sinh tố Bơ Đắk Lắk</span><strong>32k</strong></div>
@@ -787,7 +749,7 @@ export default function MenuSection() {
 
                 <div>
                   <h4 style={{ color: '#8b5a2b', fontSize: '1.05rem', fontWeight: 800, borderBottom: '1px solid #d4b895', paddingBottom: '4px', marginBottom: '8px' }}>
-                    🥣 SỮA CHUA & TRÀ SỮA
+                    SỮA CHUA & TRÀ SỮA
                   </h4>
                   <div style={{ fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Sữa chua đánh đá</span><strong>22k</strong></div>

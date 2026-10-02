@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { MapPin, Phone, ArrowRight, Sparkles, Star, Droplets, Coffee, Wifi } from 'lucide-react';
+import { MapPin, Phone, ArrowRight, Star, Droplets, Coffee, Wifi } from 'lucide-react';
 import { CAFE_INFO } from '@/data/cafeInfo';
 
 export default function Hero() {
@@ -64,14 +64,14 @@ export default function Hero() {
         >
           {/* Left Column: Text & CTA */}
           <div style={{ maxWidth: '680px' }}>
-            {/* Top Badges */}
+            {/* Top Status Indicators (Clean, Professional) */}
             <div
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',
                 alignItems: 'center',
-                gap: '10px',
-                marginBottom: '20px'
+                gap: '12px',
+                marginBottom: '22px'
               }}
             >
               <div
@@ -107,17 +107,17 @@ export default function Hero() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '6px',
-                  backgroundColor: 'rgba(200, 138, 88, 0.2)',
+                  backgroundColor: 'rgba(200, 138, 88, 0.18)',
                   color: '#f7dfca',
                   padding: '6px 14px',
                   borderRadius: '9999px',
                   fontSize: '0.84rem',
                   fontWeight: 600,
-                  border: '1px solid rgba(200, 138, 88, 0.4)'
+                  border: '1px solid rgba(200, 138, 88, 0.35)'
                 }}
               >
                 <Droplets size={14} color="#e29d62" />
-                <span>Phun Sương Mát Lạnh</span>
+                <span>Sân Vườn Phun Sương Mát Lạnh</span>
               </div>
             </div>
 
@@ -149,16 +149,16 @@ export default function Hero() {
             {/* Subtitle */}
             <p
               style={{
-                fontSize: 'clamp(1rem, 2vw, 1.18rem)',
+                fontSize: 'clamp(1rem, 2vw, 1.15rem)',
                 color: '#e0d2c8',
                 lineHeight: 1.7,
                 marginBottom: '32px',
                 maxWidth: '620px'
               }}
             >
-              Điểm dừng chân lý tưởng tại <strong>156 Trần Thị Trọng, Tân Bình</strong>. Thưởng thức
+              Điểm dừng chân thư thái tại <strong>156 Trần Thị Trọng, Tân Bình</strong>. Thưởng thức
               cà phê phin rang mộc đậm vị, đá xay kem tươi béo ngậy và sinh tố trái cây thanh mát
-              trong không gian giàn cây rợp bóng mát cùng hệ thống phun sương dập tan cái nóng Sài Gòn.
+              trong không gian giàn cây rợp bóng cùng hệ thống phun sương dập tan cái nóng Sài Gòn.
             </p>
 
             {/* Highlights row */}
@@ -229,12 +229,12 @@ export default function Hero() {
                 href="#menu"
                 className="btn btn-primary"
                 style={{
-                  padding: '15px 32px',
-                  fontSize: '1.05rem',
+                  padding: '14px 30px',
+                  fontSize: '1rem',
                   fontWeight: 700
                 }}
               >
-                <span>Khám Phá Menu (Từ 18k)</span>
+                <span>Xem Menu Đồ Uống (Từ 18k)</span>
                 <ArrowRight size={18} />
               </a>
 
@@ -244,12 +244,12 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="btn btn-dark"
                 style={{
-                  padding: '15px 24px',
-                  fontSize: '1rem',
+                  padding: '14px 22px',
+                  fontSize: '0.96rem',
                   border: '1px solid rgba(200, 138, 88, 0.4)'
                 }}
               >
-                <MapPin size={18} color="#e29d62" />
+                <MapPin size={17} color="#e29d62" />
                 <span>Chỉ Đường Đến Quán</span>
               </a>
 
@@ -258,12 +258,12 @@ export default function Hero() {
                 className="btn"
                 style={{
                   color: '#f0e3db',
-                  padding: '14px 20px',
-                  fontSize: '0.96rem',
+                  padding: '13px 18px',
+                  fontSize: '0.94rem',
                   border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}
               >
-                <Phone size={17} color="#e29d62" />
+                <Phone size={16} color="#e29d62" />
                 <span>{CAFE_INFO.phoneDisplay}</span>
               </a>
             </div>
@@ -273,7 +273,7 @@ export default function Hero() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '16px',
+                gap: '14px',
                 marginTop: '36px',
                 paddingTop: '20px',
                 borderTop: '1px solid rgba(255, 255, 255, 0.12)'
@@ -287,13 +287,13 @@ export default function Hero() {
               <span style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: 600 }}>
                 4.8 / 5.0
               </span>
-              <span style={{ fontSize: '0.88rem', color: '#bcaea4' }}>
-                • Hơn 500+ lượt khách yêu thích tại khu vực Tân Bình
+              <span style={{ fontSize: '0.86rem', color: '#bcaea4' }}>
+                • Khách hàng tin tưởng đánh giá tại khu vực Tân Bình
               </span>
             </div>
           </div>
 
-          {/* Right Column: Floating Showcase Visuals */}
+          {/* Right Column: Featured Visuals */}
           <div
             style={{
               position: 'relative',
@@ -329,11 +329,11 @@ export default function Hero() {
                     position: 'absolute',
                     inset: 0,
                     background:
-                      'linear-gradient(to top, rgba(20, 10, 5, 0.95) 0%, rgba(20, 10, 5, 0.3) 50%, transparent 100%)'
+                      'linear-gradient(to top, rgba(20, 10, 5, 0.95) 0%, rgba(20, 10, 5, 0.25) 50%, transparent 100%)'
                   }}
                 />
 
-                {/* Steam Rising Animation Indicator */}
+                {/* Steam effect */}
                 <div
                   style={{
                     position: 'absolute',
@@ -385,7 +385,7 @@ export default function Hero() {
                     border: '1px solid rgba(200, 138, 88, 0.4)'
                   }}
                 >
-                  Signature • Cà Phê Phin
+                  Cà Phê Phin Truyền Thống
                 </div>
               </div>
 
@@ -397,7 +397,7 @@ export default function Hero() {
                       Cà Phê Phin Tí Tách & Trà Lài
                     </h3>
                     <p style={{ color: '#c0afa3', fontSize: '0.9rem', marginTop: '2px' }}>
-                      Pha phin tại bàn, hạt mộc chuẩn gu Sài Gòn
+                      Pha phin tại bàn, hạt rang mộc chuẩn gu Sài Gòn
                     </p>
                   </div>
                   <div style={{ textAlign: 'right' }}>
@@ -421,7 +421,7 @@ export default function Hero() {
                   }}
                 >
                   <MapPin size={14} color="#e29d62" />
-                  <span>156 Trần Thị Trọng, Tân Bình (Gần khu Tân Sơn)</span>
+                  <span>156 Trần Thị Trọng, Tân Bình (Khu Tân Sơn)</span>
                 </div>
               </div>
             </div>
@@ -467,7 +467,7 @@ export default function Hero() {
                   Bạc Xỉu 3 Tầng
                 </span>
                 <span style={{ color: '#e29d62', fontSize: '0.82rem', fontWeight: 600 }}>
-                  25.000đ • Best Seller
+                  25.000đ • Món Bán Chạy
                 </span>
               </div>
             </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Droplets, Coffee, Sparkles, Wifi, ShieldCheck, HeartHandshake, Tv, Zap } from 'lucide-react';
+import { Droplets, Coffee, Wifi, ShieldCheck, HeartHandshake, Tv } from 'lucide-react';
 import { CAFE_INFO } from '@/data/cafeInfo';
 
 export default function Features() {

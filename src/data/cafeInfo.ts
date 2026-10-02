@@ -38,7 +38,7 @@ export const CAFE_INFO = {
     {
       title: "Trái Cây Tươi Xay Mỗi Ngày",
       desc: "Sinh tố bơ Đắk Lắk dẻo béo, xoài cát, dâu tây, sữa chua đánh đá chất lượng tươi ngon từng ly.",
-      icon: "Sparkles"
+      icon: "Award"
     },
     {
       title: "Wifi Tốc Độ Cao & Ổ Điện Từng Bàn",

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Droplets, Sparkles, Heart, Coffee, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Droplets, Heart, Coffee, CheckCircle2 } from 'lucide-react';
 
 export default function Story() {
   return (
@@ -139,7 +139,7 @@ export default function Story() {
                 100% Cà Phê Mộc
               </span>
               <span style={{ fontSize: '0.82rem', color: '#2a5a34', fontWeight: 600 }}>
-                🌿 Phun Sương Mát Mẻ Quanh Năm
+                Phun Sương Mát Mẻ Quanh Năm
               </span>
             </div>
           </div>
@@ -153,14 +153,13 @@ export default function Story() {
                 gap: '8px',
                 color: '#c88a58',
                 fontWeight: 700,
-                fontSize: '0.9rem',
+                fontSize: '0.86rem',
                 textTransform: 'uppercase',
                 letterSpacing: '1px',
                 marginBottom: '12px'
               }}
             >
-              <Sparkles size={16} />
-              <span>Cái Tên Thân Thương Của Người Sài Gòn</span>
+              <span>Nét Đẹp Giản Dị Sài Gòn</span>
             </div>
 
             <h3
@@ -175,16 +174,16 @@ export default function Story() {
             </h3>
 
             <p style={{ color: '#5a473c', fontSize: '1.02rem', lineHeight: 1.75, marginBottom: '16px' }}>
-              Người Sài Gòn thường gọi nhau bằng những cái tên mộc mạc, gần gũi. “Ông Mập” không chỉ
-              là một cái tên, mà là tinh thần phóng khoáng, xởi lởi, hào sảng. Đến đây, bạn sẽ luôn
-              được chào đón bằng nụ cười thân thiện, ly trà lài mát lạnh luôn đầy ắp mà chẳng bao giờ
-              tính tiền thêm.
+              Người Sài Gòn thường gọi nhau bằng những cái tên mộc mạc, thân tình. “Ông Mập” không chỉ
+              là một cái tên, mà là biểu trưng cho sự phóng khoáng, xởi lởi, hào sảng. Đến đây, bạn luôn
+              được chào đón bằng sự niềm nở, ly trà lài thơm mát lạnh luôn đầy ắp mà chẳng bao giờ
+              tính thêm phụ phí.
             </p>
 
             <p style={{ color: '#5a473c', fontSize: '1.02rem', lineHeight: 1.75, marginBottom: '24px' }}>
               Giữa trưa hè oi ả của Tân Bình, khi bước vào quán, <strong>hệ thống phun sương tự động</strong> kết
               hợp cùng <strong>giàn cây leo xanh mát</strong> phủ quanh mái hiên sẽ làm dịu ngay cái nóng rát,
-              trả lại cho bạn một không gian trong lành, dễ chịu như đang ở cao nguyên.
+              trả lại cho bạn một không gian trong lành, dễ chịu như đang ở miền xanh yên ả.
             </p>
 
             {/* Checklist */}
@@ -192,7 +191,7 @@ export default function Story() {
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                 <CheckCircle2 size={20} color="#2a5a34" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <span style={{ color: '#2c180f', fontSize: '0.95rem', fontWeight: 500 }}>
-                  <strong>Hạt cà phê nguyên chất:</strong> Rang mộc, không tẩm bột bắp hay chất tạo màu độc hại, hậu ngọt sâu.
+                  <strong>Hạt cà phê nguyên chất:</strong> Rang mộc, không tẩm bột bắp hay chất tạo màu độc hại, hậu ngọt sâu lắng.
                 </span>
               </div>
 
@@ -259,8 +258,8 @@ export default function Story() {
               Không Gian Phun Sương Mát Lạnh
             </h4>
             <p style={{ color: '#68564c', fontSize: '0.93rem', lineHeight: 1.65 }}>
-              Được trang bị dàn vòi phun sương tự động công nghệ cao rải đều khắp hiên và sân vườn,
-              mang lại làn gió sương mát rượi, giữ ẩm dịu dàng cho cây cỏ và làm mát khách ngồi.
+              Dàn vòi phun sương tự động bao phủ khắp mái hiên và sân cây, mang lại làn sương mát dịu,
+              giữ ẩm tự nhiên cho cây cỏ và làm mát khách ngồi.
             </p>
           </div>
 
@@ -325,8 +324,8 @@ export default function Story() {
               Hào Sảng Chuẩn Vị Sài Gòn
             </h4>
             <p style={{ color: '#68564c', fontSize: '0.93rem', lineHeight: 1.65 }}>
-              Mức giá vô cùng hạt dẻ chỉ từ 18.000đ - 38.000đ, trà đá mát lạnh châm không giới hạn,
-              nhân viên vui vẻ niềm nở, chỗ giữ xe miễn phí an toàn tuyệt đối.
+              Mức giá vô cùng bình dân chỉ từ 18.000đ - 38.000đ, trà đá mát lạnh châm không giới hạn,
+              nhân viên vui vẻ niềm nở, chỗ giữ xe miễn phí an toàn chu đáo.
             </p>
           </div>
         </div>
