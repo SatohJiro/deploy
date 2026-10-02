@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import {
   Search,
@@ -10,7 +10,9 @@ import {
   Check,
   Coffee,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { MENU_ITEMS, MENU_CATEGORIES } from '@/data/menuData';
 import { CAFE_INFO } from '@/data/cafeInfo';
@@ -25,6 +27,79 @@ export default function MenuSection() {
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const [showOriginalMenuModal, setShowOriginalMenuModal] = useState<boolean>(false);
   const [visibleCount, setVisibleCount] = useState<number>(INITIAL_VISIBLE_COUNT);
+
+  // Category scroll state & refs for PC & Mobile
+  const tabsContainerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
+  const [canScrollRight, setCanScrollRight] = useState<boolean>(true);
+  const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [startX, setStartX] = useState<number>(0);
+  const [scrollLeftState, setScrollLeftState] = useState<number>(0);
+  const hasDraggedRef = useRef<boolean>(false);
+
+  const checkScrollability = () => {
+    if (tabsContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = tabsContainerRef.current;
+      setCanScrollLeft(scrollLeft > 10);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 10);
+    }
+  };
+
+  useEffect(() => {
+    const el = tabsContainerRef.current;
+    if (!el) return;
+
+    checkScrollability();
+    window.addEventListener('resize', checkScrollability);
+
+    // Mouse wheel horizontal scroll on PC
+    const onWheel = (e: WheelEvent) => {
+      if (el.scrollWidth > el.clientWidth && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
+        checkScrollability();
+      }
+    };
+
+    el.addEventListener('wheel', onWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener('resize', checkScrollability);
+      el.removeEventListener('wheel', onWheel);
+    };
+  }, []);
+
+  const scrollTabs = (direction: 'left' | 'right') => {
+    if (tabsContainerRef.current) {
+      const offset = direction === 'left' ? -280 : 280;
+      tabsContainerRef.current.scrollBy({ left: offset, behavior: 'smooth' });
+      setTimeout(checkScrollability, 350);
+    }
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!tabsContainerRef.current) return;
+    setIsDragging(true);
+    hasDraggedRef.current = false;
+    setStartX(e.pageX - tabsContainerRef.current.offsetLeft);
+    setScrollLeftState(tabsContainerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !tabsContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - tabsContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    if (Math.abs(walk) > 5) {
+      hasDraggedRef.current = true;
+    }
+    tabsContainerRef.current.scrollLeft = scrollLeftState - walk;
+    checkScrollability();
+  };
+
+  const handleMouseUpOrLeave = () => {
+    setIsDragging(false);
+  };
 
   // Handlers that reset pagination to initial count when changing criteria
   const handleCategoryChange = (catId: string) => {
@@ -208,56 +283,183 @@ export default function MenuSection() {
             </button>
           </div>
 
-          {/* Clean Category Tabs (Pure, Elegant Typography) */}
-          <div
-            style={{
-              display: 'flex',
-              gap: '10px',
-              overflowX: 'auto',
-              paddingBottom: '8px',
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none'
-            }}
-            className="category-tabs"
-          >
-            {MENU_CATEGORIES.map((cat) => {
-              const isActive = activeCategory === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => handleCategoryChange(cat.id)}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    padding: '10px 20px',
-                    borderRadius: '9999px',
-                    fontSize: '0.92rem',
-                    fontWeight: 600,
-                    whiteSpace: 'nowrap',
-                    transition: 'all 0.2s ease',
-                    backgroundColor: isActive ? '#1c0e08' : '#f4ede2',
-                    color: isActive ? '#ffffff' : '#3f2216',
-                    border: isActive ? '1px solid #1c0e08' : '1px solid transparent',
-                    boxShadow: isActive ? '0 4px 14px rgba(28, 14, 8, 0.2)' : 'none',
-                    cursor: 'pointer'
-                  }}
-                  onMouseEnter={(e) => {
-                    if (!isActive) {
-                      e.currentTarget.style.backgroundColor = '#ebe0d5';
-                      e.currentTarget.style.color = '#1c0e08';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!isActive) {
-                      e.currentTarget.style.backgroundColor = '#f4ede2';
-                      e.currentTarget.style.color = '#3f2216';
-                    }
-                  }}
-                >
-                  {cat.label}
-                </button>
-              );
-            })}
+          {/* Category Tabs Wrapper with Navigation Buttons and Gradients on PC */}
+          <div style={{ position: 'relative', width: '100%', margin: '4px 0' }}>
+            {/* Left Scroll Button (PC) */}
+            {canScrollLeft && (
+              <button
+                type="button"
+                onClick={() => scrollTabs('left')}
+                style={{
+                  position: 'absolute',
+                  left: '-6px',
+                  top: '45%',
+                  transform: 'translateY(-50%)',
+                  zIndex: 20,
+                  width: '38px',
+                  height: '38px',
+                  borderRadius: '50%',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid #ebdcd0',
+                  boxShadow: '0 4px 14px rgba(44, 24, 15, 0.18)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#2c180f',
+                  cursor: 'pointer',
+                  transition: 'transform 0.15s, background-color 0.15s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#fbf8f3';
+                  e.currentTarget.style.transform = 'translateY(-50%) scale(1.08)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#ffffff';
+                  e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                }}
+                aria-label="Cuộn sang trái"
+              >
+                <ChevronLeft size={20} />
+              </button>
+            )}
+
+            {/* Left Fade Gradient Mask */}
+            {canScrollLeft && (
+              <div
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  top: 0,
+                  bottom: '8px',
+                  width: '40px',
+                  background: 'linear-gradient(to right, #fbf8f3, transparent)',
+                  zIndex: 10,
+                  pointerEvents: 'none'
+                }}
+              />
+            )}
+
+            {/* Clean Category Tabs (Pure, Elegant Typography) */}
+            <div
+              ref={tabsContainerRef}
+              onScroll={checkScrollability}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUpOrLeave}
+              onMouseLeave={handleMouseUpOrLeave}
+              style={{
+                display: 'flex',
+                gap: '10px',
+                overflowX: 'auto',
+                paddingBottom: '8px',
+                paddingLeft: '4px',
+                paddingRight: '4px',
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+                cursor: isDragging ? 'grabbing' : 'pointer',
+                userSelect: isDragging ? 'none' : 'auto',
+                scrollBehavior: isDragging ? 'auto' : 'smooth'
+              }}
+              className="category-tabs"
+            >
+              {MENU_CATEGORIES.map((cat) => {
+                const isActive = activeCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => {
+                      if (!hasDraggedRef.current) {
+                        handleCategoryChange(cat.id);
+                      }
+                    }}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      padding: '10px 20px',
+                      borderRadius: '9999px',
+                      fontSize: '0.92rem',
+                      fontWeight: 600,
+                      whiteSpace: 'nowrap',
+                      transition: 'all 0.2s ease',
+                      backgroundColor: isActive ? '#1c0e08' : '#f4ede2',
+                      color: isActive ? '#ffffff' : '#3f2216',
+                      border: isActive ? '1px solid #1c0e08' : '1px solid transparent',
+                      boxShadow: isActive ? '0 4px 14px rgba(28, 14, 8, 0.2)' : 'none',
+                      cursor: 'pointer',
+                      flexShrink: 0
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isActive) {
+                        e.currentTarget.style.backgroundColor = '#ebe0d5';
+                        e.currentTarget.style.color = '#1c0e08';
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isActive) {
+                        e.currentTarget.style.backgroundColor = '#f4ede2';
+                        e.currentTarget.style.color = '#3f2216';
+                      }
+                    }}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Right Fade Gradient Mask */}
+            {canScrollRight && (
+              <div
+                style={{
+                  position: 'absolute',
+                  right: 0,
+                  top: 0,
+                  bottom: '8px',
+                  width: '40px',
+                  background: 'linear-gradient(to left, #fbf8f3, transparent)',
+                  zIndex: 10,
+                  pointerEvents: 'none'
+                }}
+              />
+            )}
+
+            {/* Right Scroll Button (PC) */}
+            {canScrollRight && (
+              <button
+                type="button"
+                onClick={() => scrollTabs('right')}
+                style={{
+                  position: 'absolute',
+                  right: '-6px',
+                  top: '45%',
+                  transform: 'translateY(-50%)',
+                  zIndex: 20,
+                  width: '38px',
+                  height: '38px',
+                  borderRadius: '50%',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid #ebdcd0',
+                  boxShadow: '0 4px 14px rgba(44, 24, 15, 0.18)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#2c180f',
+                  cursor: 'pointer',
+                  transition: 'transform 0.15s, background-color 0.15s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#fbf8f3';
+                  e.currentTarget.style.transform = 'translateY(-50%) scale(1.08)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#ffffff';
+                  e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                }}
+                aria-label="Cuộn sang phải"
+              >
+                <ChevronRight size={20} />
+              </button>
+            )}
           </div>
         </div>
 
