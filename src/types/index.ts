@@ -1,7 +1,7 @@
 export interface MenuItem {
   id: string;
   name: string;
-  category: 'coffee' | 'daxay' | 'sinhto' | 'trasua' | 'nuocep' | 'suachua' | 'takeaway';
+  category: 'coffee' | 'daxay' | 'sinhto' | 'trasua' | 'nuocep' | 'suachua' | 'anvat' | 'takeaway';
   categoryName: string;
   price: number;
   originalPrice?: number;
