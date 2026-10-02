@@ -8,11 +8,15 @@ import {
   Eye,
   X,
   Check,
-  Coffee
+  Coffee,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import { MENU_ITEMS, MENU_CATEGORIES } from '@/data/menuData';
 import { CAFE_INFO } from '@/data/cafeInfo';
 import { MenuItem } from '@/types';
+
+const INITIAL_VISIBLE_COUNT = 9;
 
 export default function MenuSection() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -20,6 +24,23 @@ export default function MenuSection() {
   const [filterBestSeller, setFilterBestSeller] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const [showOriginalMenuModal, setShowOriginalMenuModal] = useState<boolean>(false);
+  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_VISIBLE_COUNT);
+
+  // Handlers that reset pagination to initial count when changing criteria
+  const handleCategoryChange = (catId: string) => {
+    setActiveCategory(catId);
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
+  };
+
+  const handleSearchChange = (val: string) => {
+    setSearchQuery(val);
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
+  };
+
+  const handleToggleBestSeller = () => {
+    setFilterBestSeller((prev) => !prev);
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
+  };
 
   // Filter items based on active category, search query and best seller flag
   const filteredItems = useMemo(() => {
@@ -33,6 +54,11 @@ export default function MenuSection() {
       return matchCategory && matchSearch && matchBestSeller;
     });
   }, [activeCategory, searchQuery, filterBestSeller]);
+
+  // Paginated/Visible subset of items
+  const displayedItems = useMemo(() => {
+    return filteredItems.slice(0, visibleCount);
+  }, [filteredItems, visibleCount]);
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('vi-VN').format(price) + 'đ';
@@ -105,7 +131,7 @@ export default function MenuSection() {
                 type="text"
                 placeholder="Tìm món: Cà phê phin, Bạc xỉu, Sinh tố bơ, Oreo..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => handleSearchChange(e.target.value)}
                 style={{
                   width: '100%',
                   padding: '13px 20px 13px 44px',
@@ -132,7 +158,7 @@ export default function MenuSection() {
               />
               {searchQuery && (
                 <button
-                  onClick={() => setSearchQuery('')}
+                  onClick={() => handleSearchChange('')}
                   style={{
                     position: 'absolute',
                     right: '16px',
@@ -149,7 +175,7 @@ export default function MenuSection() {
 
             {/* Quick Filter: Best Sellers */}
             <button
-              onClick={() => setFilterBestSeller(!filterBestSeller)}
+              onClick={handleToggleBestSeller}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -199,7 +225,7 @@ export default function MenuSection() {
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => handleCategoryChange(cat.id)}
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -236,14 +262,14 @@ export default function MenuSection() {
         </div>
 
         {/* Results Counter */}
-        <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
           <span style={{ fontSize: '0.92rem', color: '#6e5d53' }}>
-            Hiển thị <strong>{filteredItems.length}</strong> món trong thực đơn
+            Hiển thị <strong>{displayedItems.length}</strong> / <strong>{filteredItems.length}</strong> món trong thực đơn
           </span>
           {activeCategory !== 'all' && (
             <button
-              onClick={() => setActiveCategory('all')}
-              style={{ fontSize: '0.85rem', color: '#c88a58', fontWeight: 600, textDecoration: 'underline' }}
+              onClick={() => handleCategoryChange('all')}
+              style={{ fontSize: '0.85rem', color: '#c88a58', fontWeight: 600, textDecoration: 'underline', cursor: 'pointer' }}
             >
               Xem tất cả danh mục
             </button>
@@ -252,15 +278,16 @@ export default function MenuSection() {
 
         {/* Menu Grid */}
         {filteredItems.length > 0 ? (
-          <div
-            className="menu-items-grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 330px), 1fr))',
-              gap: '20px'
-            }}
-          >
-            {filteredItems.map((item) => (
+          <>
+            <div
+              className="menu-items-grid"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 330px), 1fr))',
+                gap: '20px'
+              }}
+            >
+              {displayedItems.map((item) => (
               <div
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
@@ -356,7 +383,84 @@ export default function MenuSection() {
                 </div>
               </div>
             ))}
-          </div>
+            </div>
+
+            {/* Load More / Expand Controls */}
+            {filteredItems.length > INITIAL_VISIBLE_COUNT && (
+              <div
+                style={{
+                  marginTop: '36px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '12px'
+                }}
+              >
+                {visibleCount < filteredItems.length ? (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
+                    <button
+                      onClick={() => setVisibleCount((prev) => Math.min(prev + 9, filteredItems.length))}
+                      className="btn btn-primary"
+                      style={{
+                        padding: '13px 28px',
+                        fontSize: '0.98rem',
+                        fontWeight: 700,
+                        borderRadius: '9999px',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        boxShadow: '0 6px 20px rgba(200, 138, 88, 0.3)',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      <span>Xem Thêm Món ({filteredItems.length - visibleCount} món nữa)</span>
+                      <ChevronDown size={18} />
+                    </button>
+                    <button
+                      onClick={() => setVisibleCount(filteredItems.length)}
+                      className="btn btn-outline"
+                      style={{
+                        padding: '13px 24px',
+                        fontSize: '0.92rem',
+                        borderRadius: '9999px',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      <span>Xem Toàn Bộ ({filteredItems.length} món)</span>
+                    </button>
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+                    <span style={{ fontSize: '0.9rem', color: '#7a675d', fontWeight: 500 }}>
+                      ✓ Đã hiển thị trọn vẹn toàn bộ {filteredItems.length} món trong danh mục
+                    </span>
+                    <button
+                      onClick={() => {
+                        setVisibleCount(INITIAL_VISIBLE_COUNT);
+                        const menuEl = document.getElementById('menu');
+                        if (menuEl) {
+                          menuEl.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                      className="btn btn-outline"
+                      style={{
+                        padding: '9px 20px',
+                        fontSize: '0.88rem',
+                        borderRadius: '9999px',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      <ChevronUp size={16} />
+                      <span>Thu Gọn Lại</span>
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </>
         ) : (
           <div
             style={{
@@ -376,8 +480,8 @@ export default function MenuSection() {
             </p>
             <button
               onClick={() => {
-                setSearchQuery('');
-                setActiveCategory('all');
+                handleSearchChange('');
+                handleCategoryChange('all');
                 setFilterBestSeller(false);
               }}
               className="btn btn-primary"
