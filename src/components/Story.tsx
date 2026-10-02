@@ -120,25 +120,27 @@ export default function Story() {
 
             {/* Floating Experience Badge */}
             <div
+              className="story-badge"
               style={{
                 position: 'absolute',
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 backgroundColor: '#ffffff',
-                padding: '16px 22px',
+                padding: '14px 18px',
                 borderRadius: '16px',
                 boxShadow: '0 16px 36px rgba(44, 24, 16, 0.18)',
                 border: '2px solid #e29d62',
                 textAlign: 'center',
                 zIndex: 5,
-                whiteSpace: 'nowrap'
+                maxWidth: 'calc(100% - 24px)',
+                boxSizing: 'border-box'
               }}
             >
-              <span style={{ display: 'block', fontSize: '1.45rem', fontWeight: 800, color: '#2c180f' }}>
+              <span style={{ display: 'block', fontSize: '1.25rem', fontWeight: 800, color: '#2c180f' }}>
                 100% Cà Phê Mộc
               </span>
-              <span style={{ fontSize: '0.82rem', color: '#2a5a34', fontWeight: 600 }}>
+              <span style={{ fontSize: '0.8rem', color: '#2a5a34', fontWeight: 600, display: 'block' }}>
                 Phun Sương Mát Mẻ Quanh Năm
               </span>
             </div>
@@ -330,14 +332,6 @@ export default function Story() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @media (min-width: 992px) {
-          .story-grid {
-            grid-template-columns: 1fr 1fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

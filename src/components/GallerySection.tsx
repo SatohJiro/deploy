@@ -112,9 +112,10 @@ export default function GallerySection() {
 
         {/* Gallery Grid */}
         <div
+          className="gallery-grid"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
             gap: '20px'
           }}
         >
@@ -336,12 +337,6 @@ export default function GallerySection() {
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        .gallery-card:hover .gallery-img {
-          transform: scale(1.05);
-        }
-      `}</style>
     </section>
   );
 }

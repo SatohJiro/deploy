@@ -77,9 +77,10 @@ export default function Reviews() {
 
         {/* Reviews Grid */}
         <div
+          className="reviews-grid"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
             gap: '24px'
           }}
         >

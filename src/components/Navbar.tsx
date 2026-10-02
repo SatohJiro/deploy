@@ -175,7 +175,7 @@ export default function Navbar() {
               href={CAFE_INFO.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-dark"
+              className="btn btn-dark nav-directions-btn"
               style={{
                 padding: '9px 16px',
                 fontSize: '0.88rem',
@@ -185,7 +185,7 @@ export default function Navbar() {
               title="Chỉ đường Google Maps đến 156 Trần Thị Trọng"
             >
               <MapPin size={15} color="#e29d62" />
-              <span className="hide-on-mobile">Chỉ Đường</span>
+              <span>Chỉ Đường</span>
             </a>
 
             {/* Mobile Hamburger Toggle */}
@@ -293,47 +293,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        @media (min-width: 1024px) {
-          .desktop-nav {
-            display: flex !important;
-            gap: 18px !important;
-          }
-          .desktop-nav a {
-            font-size: 0.9rem !important;
-          }
-          #desktop-call-btn {
-            display: inline-flex !important;
-          }
-          .mobile-toggle-btn {
-            display: none !important;
-          }
-        }
-        @media (min-width: 1240px) {
-          .desktop-nav {
-            gap: 28px !important;
-          }
-          .desktop-nav a {
-            font-size: 0.94rem !important;
-          }
-        }
-        @media (max-width: 640px) {
-          .hide-on-mobile {
-            display: none;
-          }
-        }
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-8px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </>
   );
 }

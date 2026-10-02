@@ -218,6 +218,7 @@ export default function Hero() {
 
             {/* CTA Group */}
             <div
+              className="hero-cta-group"
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',
@@ -426,7 +427,7 @@ export default function Hero() {
 
             {/* Floating Mini Card 1: Bạc Xỉu 3 Tầng */}
             <div
-              className="float-element hide-on-small"
+              className="float-element hero-float-card-1"
               style={{
                 position: 'absolute',
                 top: '-20px',
@@ -472,7 +473,7 @@ export default function Hero() {
 
             {/* Floating Mini Card 2: Sinh Tố Bơ Đắk Lắk */}
             <div
-              className="float-element hide-on-small"
+              className="float-element hero-float-card-2"
               style={{
                 position: 'absolute',
                 bottom: '-25px',
@@ -519,19 +520,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @media (min-width: 992px) {
-          .hero-grid {
-            grid-template-columns: 1.15fr 0.85fr !important;
-          }
-        }
-        @media (max-width: 768px) {
-          .hide-on-small {
-            display: none !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

@@ -428,14 +428,6 @@ export default function LocationContact() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @media (min-width: 992px) {
-          .contact-grid {
-            grid-template-columns: 1fr 1fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

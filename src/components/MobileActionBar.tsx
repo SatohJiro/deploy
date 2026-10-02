@@ -154,14 +154,6 @@ export default function MobileActionBar() {
           <span style={{ fontSize: '0.72rem', fontWeight: 600, color: '#f5e4d5' }}>Đặt Bàn</span>
         </a>
       </div>
-
-      <style jsx>{`
-        @media (min-width: 769px) {
-          .mobile-action-bar {
-            display: none !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }
