@@ -1,28 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
-import { MapPin, Phone, Clock, Mail, Navigation, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import React from 'react';
+import { MapPin, Phone, Clock, Navigation, CheckCircle2 } from 'lucide-react';
 import { CAFE_INFO } from '@/data/cafeInfo';
 
 export default function LocationContact() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    guests: '2',
-    time: '',
-    note: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => {
-      setFormSubmitted(false);
-      setFormData({ name: '', phone: '', guests: '2', time: '', note: '' });
-    }, 5000);
-  };
-
   return (
     <section
       id="lien-he"
@@ -47,23 +29,25 @@ export default function LocationContact() {
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr',
-            gap: '40px',
+            gap: '36px',
             alignItems: 'stretch'
           }}
           className="contact-grid"
         >
-          {/* Left: Info Cards & Quick Booking */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            {/* Info Box */}
-            <div
-              className="contact-card"
-              style={{
-                backgroundColor: '#fbf8f3',
-                borderRadius: '24px',
-                padding: '36px 30px',
-                border: '1.5px solid rgba(63, 34, 22, 0.08)'
-              }}
-            >
+          {/* Left: Info Card */}
+          <div
+            className="contact-card"
+            style={{
+              backgroundColor: '#fbf8f3',
+              borderRadius: '24px',
+              padding: '36px 30px',
+              border: '1.5px solid rgba(63, 34, 22, 0.08)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }}
+          >
+            <div>
               <h3
                 style={{
                   fontSize: '1.5rem',
@@ -77,7 +61,7 @@ export default function LocationContact() {
                 <span>Thông Tin Quán</span>
               </h3>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
                 {/* Address */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
                   <div
@@ -127,7 +111,7 @@ export default function LocationContact() {
                   </div>
                   <div>
                     <span style={{ fontSize: '0.84rem', color: '#8b796f', fontWeight: 600, textTransform: 'uppercase' }}>
-                      Hotline Đặt Chỗ & Mang Đi
+                      Hotline Hỗ Trợ & Mang Đi
                     </span>
                     <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '4px' }}>
                       <a
@@ -176,190 +160,69 @@ export default function LocationContact() {
                     </span>
                   </div>
                 </div>
-              </div>
 
-              {/* Direct Maps Link Button */}
-              <div style={{ marginTop: '28px', paddingTop: '20px', borderTop: '1px solid #ebdcd0' }}>
-                <a
-                  href={CAFE_INFO.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary full-width-btn"
-                  style={{ width: '100%', padding: '13px 16px', fontSize: '0.94rem' }}
+                {/* Perks Checklist */}
+                <div
+                  style={{
+                    backgroundColor: '#ffffff',
+                    borderRadius: '14px',
+                    padding: '16px 18px',
+                    border: '1px solid #ebdcd0',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '8px'
+                  }}
                 >
-                  <Navigation size={18} />
-                  <span>Chỉ Đường Bằng Google Maps</span>
-                </a>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#3f2216' }}>
+                    <CheckCircle2 size={16} color="#2a5a34" style={{ flexShrink: 0 }} />
+                    <span>Bãi giữ xe máy miễn phí an toàn ngay trước quán</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#3f2216' }}>
+                    <CheckCircle2 size={16} color="#2a5a34" style={{ flexShrink: 0 }} />
+                    <span>Hệ thống phun sương tự động mát dịu quanh năm</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#3f2216' }}>
+                    <CheckCircle2 size={16} color="#2a5a34" style={{ flexShrink: 0 }} />
+                    <span>Trà đá thơm mát lạnh phục vụ miễn phí không giới hạn</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#3f2216' }}>
+                    <CheckCircle2 size={16} color="#2a5a34" style={{ flexShrink: 0 }} />
+                    <span>Wifi tốc độ cao & ổ điện tiện làm việc, xem bóng đá</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Quick Reservation Form */}
+            {/* Action Buttons */}
             <div
-              className="contact-card"
               style={{
-                backgroundColor: '#ffffff',
-                borderRadius: '24px',
-                padding: '32px 30px',
-                border: '1.5px solid rgba(63, 34, 22, 0.08)',
-                boxShadow: '0 4px 20px rgba(33, 16, 8, 0.04)'
+                marginTop: '28px',
+                paddingTop: '20px',
+                borderTop: '1px solid #ebdcd0',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px'
               }}
             >
-              <h3 style={{ fontSize: '1.35rem', color: '#1f110b', marginBottom: '8px' }}>
-                Đặt Bàn Trước Hoặc Đặt Nước Sớm
-              </h3>
-              <p style={{ color: '#68564c', fontSize: '0.88rem', marginBottom: '20px' }}>
-                Đi nhóm đông hoặc cần giữ bàn làm việc/xem bóng đá? Hãy để lại thông tin, quán sẽ chuẩn bị chu đáo!
-              </p>
+              <a
+                href={CAFE_INFO.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary full-width-btn"
+                style={{ width: '100%', padding: '13px 16px', fontSize: '0.94rem' }}
+              >
+                <Navigation size={18} />
+                <span>Chỉ Đường Bằng Google Maps</span>
+              </a>
 
-              {formSubmitted ? (
-                <div
-                  style={{
-                    backgroundColor: '#eaf4ed',
-                    border: '1.5px solid #2a5a34',
-                    borderRadius: '16px',
-                    padding: '20px',
-                    color: '#1e4626',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '12px'
-                  }}
-                >
-                  <CheckCircle2 size={24} color="#2a5a34" style={{ flexShrink: 0 }} />
-                  <div>
-                    <span style={{ fontWeight: 700, display: 'block' }}>Gửi Yêu Cầu Thành Công!</span>
-                    <span style={{ fontSize: '0.86rem' }}>Ông Mập Coffee đã nhận thông tin và sẽ chuẩn bị sẵn sàng đón bạn.</span>
-                  </div>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                  <div className="form-row-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-                    <div>
-                      <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#3f2216', display: 'block', marginBottom: '4px' }}>
-                        Tên của bạn *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Anh Tuấn..."
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        style={{
-                          width: '100%',
-                          padding: '10px 14px',
-                          borderRadius: '10px',
-                          border: '1px solid #ebdcd0',
-                          backgroundColor: '#fbf8f3',
-                          fontSize: '0.9rem',
-                          outline: 'none'
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#3f2216', display: 'block', marginBottom: '4px' }}>
-                        Số điện thoại *
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        placeholder="09xx..."
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        style={{
-                          width: '100%',
-                          padding: '10px 14px',
-                          borderRadius: '10px',
-                          border: '1px solid #ebdcd0',
-                          backgroundColor: '#fbf8f3',
-                          fontSize: '0.9rem',
-                          outline: 'none'
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="form-row-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-                    <div>
-                      <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#3f2216', display: 'block', marginBottom: '4px' }}>
-                        Số lượng người
-                      </label>
-                      <select
-                        value={formData.guests}
-                        onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                        style={{
-                          width: '100%',
-                          padding: '10px 14px',
-                          borderRadius: '10px',
-                          border: '1px solid #ebdcd0',
-                          backgroundColor: '#fbf8f3',
-                          fontSize: '0.9rem',
-                          outline: 'none'
-                        }}
-                      >
-                        <option value="1-2">1 - 2 người</option>
-                        <option value="3-5">3 - 5 người</option>
-                        <option value="6-10">6 - 10 người</option>
-                        <option value="10+">Nhóm trên 10 người</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#3f2216', display: 'block', marginBottom: '4px' }}>
-                        Thời gian dự kiến
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="VD: 09h sáng nay"
-                        value={formData.time}
-                        onChange={(e) => setFormData({ ...formData, time: e.target.value })}
-                        style={{
-                          width: '100%',
-                          padding: '10px 14px',
-                          borderRadius: '10px',
-                          border: '1px solid #ebdcd0',
-                          backgroundColor: '#fbf8f3',
-                          fontSize: '0.9rem',
-                          outline: 'none'
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#3f2216', display: 'block', marginBottom: '4px' }}>
-                      Ghi chú thêm (Món uống đặt trước / Bàn có ổ điện...)
-                    </label>
-                    <textarea
-                      rows={2}
-                      placeholder="VD: Cho mình 2 ly bạc xỉu ít ngọt, bàn gần quạt mát..."
-                      value={formData.note}
-                      onChange={(e) => setFormData({ ...formData, note: e.target.value })}
-                      style={{
-                        width: '100%',
-                        padding: '10px 14px',
-                        borderRadius: '10px',
-                        border: '1px solid #ebdcd0',
-                        backgroundColor: '#fbf8f3',
-                        fontSize: '0.9rem',
-                        outline: 'none',
-                        resize: 'none'
-                      }}
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="btn btn-dark full-width-btn"
-                    style={{
-                      width: '100%',
-                      padding: '13px',
-                      fontSize: '0.95rem',
-                      marginTop: '6px'
-                    }}
-                  >
-                    <Send size={16} />
-                    <span>Xác Nhận Gửi Yêu Cầu</span>
-                  </button>
-                </form>
-              )}
+              <a
+                href={`tel:${CAFE_INFO.phone}`}
+                className="btn btn-dark full-width-btn"
+                style={{ width: '100%', padding: '13px 16px', fontSize: '0.94rem' }}
+              >
+                <Phone size={18} />
+                <span>Gọi Quán: {CAFE_INFO.phoneDisplay}</span>
+              </a>
             </div>
           </div>
 

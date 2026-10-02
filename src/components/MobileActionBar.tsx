@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Phone, Coffee, Navigation, MessageCircle } from 'lucide-react';
+import { Phone, Coffee, Navigation, Camera } from 'lucide-react';
 import { CAFE_INFO } from '@/data/cafeInfo';
 
 export default function MobileActionBar() {
@@ -124,9 +124,9 @@ export default function MobileActionBar() {
           <span style={{ fontSize: '0.72rem', fontWeight: 600, color: '#f5e4d5' }}>Chỉ Đường</span>
         </a>
 
-        {/* Booking */}
+        {/* Cafe Space Gallery */}
         <a
-          href="#lien-he"
+          href="#khong-gian"
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -143,15 +143,15 @@ export default function MobileActionBar() {
               height: '36px',
               borderRadius: '50%',
               backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              color: '#93c5fd',
+              color: '#fcd34d',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
             }}
           >
-            <MessageCircle size={17} />
+            <Camera size={17} />
           </div>
-          <span style={{ fontSize: '0.72rem', fontWeight: 600, color: '#f5e4d5' }}>Đặt Bàn</span>
+          <span style={{ fontSize: '0.72rem', fontWeight: 600, color: '#f5e4d5' }}>Không Gian</span>
         </a>
       </div>
     </div>
