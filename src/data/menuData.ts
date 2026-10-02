@@ -56,7 +56,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Cà Phê & Cacao",
     price: 33000,
     description: "Cà phê pha phin và sữa đặc được lắc đều tạo lớp bọt cà phê sánh mịn, bồng bềnh thơm béo.",
-    image: "/images/coffee-sua-barista.jpg",
+    image: "/images/cf-sua-lac.jpg",
     isNew: true
   },
   {
@@ -85,7 +85,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Cà Phê & Cacao",
     price: 38000,
     description: "Sự kết hợp độc đáo giữa vị béo của bạc xỉu và hương vị socola mầm lúa mạch Milo đậm đà.",
-    image: "/images/drink-hot-cocoa.jpg",
+    image: "/images/bac-xiu-milo.jpg",
     isNew: true
   },
   {
@@ -105,7 +105,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Cà Phê & Cacao",
     price: 38000,
     description: "Cà phê sữa tươi thanh mát kết hợp sương sáo dai giòn thanh nhiệt cơ thể.",
-    image: "/images/coffee-bac-xiu.jpg",
+    image: "/images/cf-suong-sao.jpg",
     isNew: true
   },
   {
@@ -123,8 +123,8 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "coffee",
     categoryName: "Cà Phê & Cacao",
     price: 33000,
-    description: "Sữa tươi ngọt thanh hòa cùng sốt sốt caramel óng ánh thơm béo ngậy khó cưỡng.",
-    image: "/images/coffee-sua-barista.jpg",
+    description: "Sữa tươi ngọt thanh hòa cùng sốt caramel óng ánh thơm béo ngậy khó cưỡng.",
+    image: "/images/sua-tuoi-caramel.jpg",
     isNew: true
   },
   {
@@ -163,7 +163,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Cà Phê & Cacao",
     price: 29000,
     description: "Sữa đặc hoặc sữa tươi đánh nóng ấm bụng, bổ dưỡng.",
-    image: "/images/coffee-phin-drip.jpg"
+    image: "/images/sua-nong.jpg"
   },
   {
     id: "sua-tuoi",
@@ -224,7 +224,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đá Xay Kem Tươi",
     price: 40000,
     description: "Vị chua thanh thơm lừng của chanh dây tươi nhiệt đới kết hợp đá tuyết và kem sữa.",
-    image: "/images/drink-mango-yogurt.jpg"
+    image: "/images/chanh-leo-da-xay.jpg"
   },
   {
     id: "dau-tay-da-xay",
@@ -242,7 +242,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đá Xay Kem Tươi",
     price: 40000,
     description: "Cam tươi mọng nước đá xay thanh mát giải nhiệt, bổ sung vitamin C tức thì.",
-    image: "/images/nuoc-ep-cam.jpg"
+    image: "/images/cam-da-xay.jpg"
   },
   {
     id: "dao-da-xay",
@@ -251,7 +251,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đá Xay Kem Tươi",
     price: 40000,
     description: "Hương vị đào thơm ngọt ngào xay tuyết mát lạnh kèm lớp kem tươi bồng bềnh.",
-    image: "/images/tra-dao-cam-sa.jpg"
+    image: "/images/dao-da-xay.jpg"
   },
   {
     id: "thom-da-xay",
@@ -260,7 +260,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đá Xay Kem Tươi",
     price: 40000,
     description: "Dứa tươi chua ngọt nhiệt đới xay mịn mát rượi hòa cùng vị kem sữa béo nhẹ.",
-    image: "/images/drink-fruit-tea.jpg"
+    image: "/images/thom-da-xay.jpg"
   },
   {
     id: "kiwi-da-xay",
@@ -269,7 +269,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đá Xay Kem Tươi",
     price: 40000,
     description: "Kiwi xanh chua ngọt tươi mát giàu dinh dưỡng, thức uống bắt mắt và sảng khoái.",
-    image: "/images/drink-smoothie-coffee.jpg"
+    image: "/images/kiwi-da-xay.jpg"
   },
   {
     id: "khoai-mon-da-xay",
@@ -278,7 +278,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đá Xay Kem Tươi",
     price: 40000,
     description: "Khoai môn thơm bùi béo ngậy màu tím dịu mắt phủ ngập lớp kem tươi thơm lừng.",
-    image: "/images/drink-smoothie-coffee.jpg"
+    image: "/images/khoai-mon-da-xay.jpg"
   },
 
   // ==========================================
@@ -322,7 +322,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 38000,
     description: "Trà xanh Matcha Nhật Bản thơm thanh khiết hòa cùng sữa tươi sánh béo dịu dàng.",
-    image: "/images/matcha-da-xay.jpg",
+    image: "/images/matcha-latte.jpg",
     isNew: true
   },
   {
@@ -343,7 +343,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 38000,
     description: "Hương hoa nhài thơm ngát thanh tao kết hợp cùng đào miếng giòn ngọt mát dịu.",
-    image: "/images/tra-dao-cam-sa.jpg",
+    image: "/images/tra-dao-nhai.jpg",
     isNew: true
   },
   {
@@ -392,7 +392,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 38000,
     description: "Trà hoa quả chua thanh hòa cùng mứt dâu tây tươi mát lành.",
-    image: "/images/tra-dau-xi-muoi.jpg"
+    image: "/images/sinh-to-dau.jpg"
   },
   {
     id: "tra-vai",
@@ -411,7 +411,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 38000,
     description: "Xoài chín ngọt dịu kết hợp chanh leo chua thơm mang đến hương vị nhiệt đới bùng nổ.",
-    image: "/images/drink-mango-yogurt.jpg"
+    image: "/images/tra-xoai-chanh-leo.jpg"
   },
   {
     id: "tra-olong-dao-cam",
@@ -420,7 +420,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 38000,
     description: "Cốt trà Olong đậm vị thanh tao kết hợp hương đào ngọt ngào và cam mọng nước.",
-    image: "/images/tra-dao-cam-sa.jpg"
+    image: "/images/tra-olong-dao-cam.jpg"
   },
   {
     id: "tra-tac-mat-ong-tc",
@@ -438,7 +438,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 38000,
     description: "Trà Lipton đậm vị chua ngọt cùng lát cam vàng tươi và trân châu dai giòn.",
-    image: "/images/drink-fruit-tea.jpg"
+    image: "/images/tra-olong-dao-cam.jpg"
   },
   {
     id: "tra-chanh-truyen-thong",
@@ -447,7 +447,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 30000,
     description: "Trà chanh chuẩn vị góc phố, vị chua thanh mát lạnh đánh tan cơn khát.",
-    image: "/images/chanh-tuyet.jpg"
+    image: "/images/tra-chanh-truyen-thong.jpg"
   },
   {
     id: "lipton-sua",
@@ -474,7 +474,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 30000,
     description: "Trà túi lọc Lipton vàng tươi thơm ngát giải khát sảng khoái.",
-    image: "/images/drink-fruit-tea.jpg"
+    image: "/images/tra-chanh-truyen-thong.jpg"
   },
   {
     id: "tra-gung-nong",
@@ -492,7 +492,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 33000,
     description: "Gừng tươi thơm nồng kết hợp mật ong ngọt dịu, làm ấm cơ thể và tăng sức đề kháng.",
-    image: "/images/coffee-phin-drip.jpg"
+    image: "/images/tra-gung-mat-ong.jpg"
   },
   {
     id: "binh-tra-nong",
@@ -501,7 +501,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Trà Trái Cây & Trà Sữa",
     price: 15000,
     description: "Ấm trà mạn nóng hổi để cùng nhâm nhi trò chuyện thong thả tại quán.",
-    image: "/images/coffee-phin-drip.jpg"
+    image: "/images/binh-tra-nong.jpg"
   },
 
   // ==========================================
@@ -514,7 +514,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sinh Tố & Sữa Dừa",
     price: 38000,
     description: "Món signature đặc sắc: Sữa bắp ngọt bùi thơm lừng kết hợp thạch lá dứa thanh mát giòn dai.",
-    image: "/images/sua-dua-la-nep.jpg",
+    image: "/images/sua-bap-thach-la-dua.jpg",
     isNew: true,
     isSignature: true,
     isBestSeller: true
@@ -548,7 +548,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sinh Tố & Sữa Dừa",
     price: 45000,
     description: "Bơ sáp dẻo quánh kết hợp cơm sầu riêng thơm nồng nàn béo ngậy ngất ngây.",
-    image: "/images/sinh-to-bo.jpg",
+    image: "/images/st-bo-sau-rieng.jpg",
     isSignature: true,
     isBestSeller: true
   },
@@ -559,7 +559,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sinh Tố & Sữa Dừa",
     price: 40000,
     description: "Sự kết hợp hoàn hảo giữa vị béo ngậy của bơ sáp và vị ngọt thơm của xoài cát tươi.",
-    image: "/images/sinh-to-bo.jpg",
+    image: "/images/st-bo-xoai.jpg",
     isNew: true
   },
   {
@@ -589,7 +589,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sinh Tố & Sữa Dừa",
     price: 38000,
     description: "Mãng cầu xiêm tuyển chọn dầm xay thơm lừng chua ngọt kích thích vị giác.",
-    image: "/images/drink-smoothie-coffee.jpg"
+    image: "/images/st-mang-cau.jpg"
   },
   {
     id: "st-xoai",
@@ -598,7 +598,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sinh Tố & Sữa Dừa",
     price: 38000,
     description: "Xoài cát chín vàng ươm ngọt thơm tự nhiên xay nhuyễn mát lạnh bổ dưỡng.",
-    image: "/images/drink-mango-yogurt.jpg"
+    image: "/images/st-xoai.jpg"
   },
   {
     id: "st-cot-dua",
@@ -607,7 +607,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sinh Tố & Sữa Dừa",
     price: 38000,
     description: "Cốt dừa béo bùi thơm ngậy xay cùng đá tuyết mịn màng mát lạnh.",
-    image: "/images/sua-dua-la-nep.jpg"
+    image: "/images/st-cot-dua.jpg"
   },
   {
     id: "st-sapoche",
@@ -616,7 +616,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sinh Tố & Sữa Dừa",
     price: 38000,
     description: "Sapoche (hồng xiêm) chín ngọt đậm đà, vị thơm ngậy đặc trưng khó quên.",
-    image: "/images/drink-smoothie-coffee.jpg"
+    image: "/images/st-sapoche.jpg"
   },
 
   // ==========================================
@@ -640,7 +640,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 50000,
     description: "Mix các loại hoa quả tươi ngon cao cấp, thơm ngon và tràn đầy năng lượng.",
-    image: "/images/nuoc-ep-cam.jpg",
+    image: "/images/nuoc-ep-oi.jpg",
     isSignature: true
   },
   {
@@ -650,7 +650,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 38000,
     description: "Cam tươi mọng nước phối cùng cà rốt giàu vitamin A, đẹp da bổ mắt.",
-    image: "/images/nuoc-ep-cam.jpg"
+    image: "/images/nuoc-ep-ca-rot.jpg"
   },
   {
     id: "nuoc-ep-hon-hop",
@@ -659,7 +659,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 38000,
     description: "Sự kết hợp tinh túy từ nhiều loại trái cây nhiệt đới tươi mát.",
-    image: "/images/drink-fruit-tea.jpg"
+    image: "/images/nuoc-ep-oi.jpg"
   },
   {
     id: "nuoc-ep-tao",
@@ -668,7 +668,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 38000,
     description: "Táo tươi ép nguyên chất ngọt thanh tự nhiên, thức uống thanh lọc cơ thể.",
-    image: "/images/nuoc-ep-cam.jpg"
+    image: "/images/nuoc-ep-tao.jpg"
   },
   {
     id: "nuoc-ep-cam",
@@ -696,7 +696,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 35000,
     description: "Dứa tươi ngọt sắc chua thanh, hỗ trợ tiêu hóa và bổ sung năng lượng.",
-    image: "/images/drink-fruit-tea.jpg"
+    image: "/images/nuoc-ep-thom.jpg"
   },
   {
     id: "nuoc-ep-oi",
@@ -705,7 +705,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 35000,
     description: "Ổi hồng tươi ép thơm mát, hàm lượng vitamin C dồi dào đẹp dáng sáng da.",
-    image: "/images/chanh-tuyet.jpg"
+    image: "/images/nuoc-ep-oi.jpg"
   },
   {
     id: "nuoc-ep-ca-rot",
@@ -714,7 +714,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 35000,
     description: "Cà rốt tươi mát lành bồi bổ sức khỏe và tăng cường thị lực.",
-    image: "/images/nuoc-ep-cam.jpg"
+    image: "/images/nuoc-ep-ca-rot.jpg"
   },
   {
     id: "nuoc-ep-chanh-day",
@@ -723,7 +723,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 35000,
     description: "Chanh leo tươi chua thanh thơm ngát, món giải nhiệt mùa hè tuyệt đỉnh.",
-    image: "/images/drink-mango-yogurt.jpg"
+    image: "/images/nuoc-ep-chanh-day.jpg"
   },
   {
     id: "nuoc-chanh-tuoi",
@@ -732,7 +732,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 30000,
     description: "Nước chanh tươi vắt đá mát rượi thanh lọc cơ thể sảng khoái.",
-    image: "/images/chanh-tuyet.jpg"
+    image: "/images/nuoc-chanh-tuoi.jpg"
   },
   {
     id: "chanh-mat-ong",
@@ -741,7 +741,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 30000,
     description: "Chanh tươi thơm lừng hòa mật ong tự nhiên ngọt thanh, dễ chịu.",
-    image: "/images/tra-tac-mat-ong.jpg"
+    image: "/images/nuoc-chanh-tuoi.jpg"
   },
   {
     id: "nuoc-chanh-muoi",
@@ -750,7 +750,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 30000,
     description: "Chanh muối ngâm truyền thống mằn mặn chua ngọt giúp bù khoáng cực tốt.",
-    image: "/images/chanh-tuyet.jpg"
+    image: "/images/nuoc-chanh-muoi.jpg"
   },
   {
     id: "dua-tuoi",
@@ -759,7 +759,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 30000,
     description: "Trái dừa tươi ngọt nước thanh khiết giải nhiệt thiên nhiên.",
-    image: "/images/sua-dua-la-nep.jpg"
+    image: "/images/dua-tuoi.jpg"
   },
   {
     id: "da-me-hat-dac",
@@ -768,7 +768,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 38000,
     description: "Me rim chua ngọt đậm đà kết hợp hạt đác dẻo dai và sốt chanh dây thơm lừng độc đáo.",
-    image: "/images/drink-fruit-tea.jpg",
+    image: "/images/da-me-hat-dac.jpg",
     isSignature: true,
     isBestSeller: true
   },
@@ -779,7 +779,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Nước Ép & Giải Khát",
     price: 38000,
     description: "Nước sâm bí đao nấu lá dứa thơm mát, sương sáo dai mềm và hạt chia bổ dưỡng.",
-    image: "/images/coffee-den-da.jpg",
+    image: "/images/suong-sao-bi-dao.jpg",
     isSignature: true
   },
 
@@ -793,7 +793,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 30000,
     description: "Sữa chua thơm dịu đánh bông cùng đá tuyết và sữa đặc béo ngọt truyền thống.",
-    image: "/images/drink-mango-yogurt.jpg",
+    image: "/images/sc-danh-da.jpg",
     isBestSeller: true
   },
   {
@@ -803,7 +803,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 35000,
     description: "Sự kết hợp bất ngờ giữa vị chua béo của sữa chua đánh đá và giọt cà phê đen phin đậm đà.",
-    image: "/images/coffee-bac-xiu.jpg",
+    image: "/images/sc-danh-ca-phe.jpg",
     isSignature: true
   },
   {
@@ -813,7 +813,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 38000,
     description: "Sữa tươi lắc đá bông mịn hòa cùng sốt chanh leo chua thơm ngọt béo thanh nhiệt.",
-    image: "/images/drink-mango-yogurt.jpg",
+    image: "/images/chanh-leo-da-xay.jpg",
     isNew: true
   },
   {
@@ -833,7 +833,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 38000,
     description: "Vị chua thanh mát dịu của sữa chua hòa quyện sốt chanh dây tươi nhiệt đới thơm nức.",
-    image: "/images/drink-mango-yogurt.jpg"
+    image: "/images/nuoc-ep-chanh-day.jpg"
   },
   {
     id: "sc-dau",
@@ -862,7 +862,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 38000,
     description: "Hương bạc hà the mát sảng khoái kết hợp sữa chua đánh tuyết cực kỳ sảng khoái.",
-    image: "/images/chanh-tuyet.jpg",
+    image: "/images/soda-bac-ha.jpg",
     isNew: true
   },
   {
@@ -872,7 +872,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 18000,
     description: "Hũ sữa chua nhà làm sánh mịn, chua dịu mát lành bổ sung lợi khuẩn.",
-    image: "/images/drink-mango-yogurt.jpg"
+    image: "/images/sc-hu.jpg"
   },
   {
     id: "soda-viet-quat",
@@ -881,7 +881,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 38000,
     description: "Soda sủi bọt mát lạnh kết hợp sốt việt quất mọng nước chua ngọt cực đã.",
-    image: "/images/viet-quat-da-xay.jpg",
+    image: "/images/soda-viet-quat.jpg",
     isSignature: true
   },
   {
@@ -891,7 +891,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 38000,
     description: "Hương vị soda chanh dây nhiệt đới sủi bọt đã khát tức thì ngày nắng hè.",
-    image: "/images/drink-fruit-tea.jpg",
+    image: "/images/soda-chanh-leo.jpg",
     isBestSeller: true
   },
   {
@@ -901,7 +901,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 38000,
     description: "Soda dâu tây đỏ au ngọt mát sủi tăm li ti mát rượi từng ngụm.",
-    image: "/images/sinh-to-dau.jpg",
+    image: "/images/soda-dau.jpg",
     isNew: true
   },
   {
@@ -911,7 +911,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 38000,
     description: "Vị bạc hà mát lạnh the the bùng nổ năng lượng và cảm giác sảng khoái.",
-    image: "/images/chanh-tuyet.jpg",
+    image: "/images/soda-bac-ha.jpg",
     isNew: true
   },
   {
@@ -921,7 +921,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Sữa Chua & Soda Ý",
     price: 25000,
     description: "Những viên kem mát lạnh nhiều vị thơm béo ngọt lành.",
-    image: "/images/ca-phe-kem.jpg"
+    image: "/images/kem-vien.jpg"
   },
 
   // ==========================================
@@ -934,7 +934,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 28000,
     description: "Nước tăng lực Redbull Bò húc ướp lạnh tiếp thêm năng lượng bền bỉ.",
-    image: undefined
+    image: "/images/bo-huc.jpg"
   },
   {
     id: "sting",
@@ -943,7 +943,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 23000,
     description: "Nước tăng lực Sting dâu đỏ ướp lạnh sảng khoái.",
-    image: undefined
+    image: "/images/soda-dau.jpg"
   },
   {
     id: "coca",
@@ -952,7 +952,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 23000,
     description: "Nước ngọt có ga Coca-Cola ướp lạnh kinh điển.",
-    image: undefined
+    image: "/images/coca.jpg"
   },
   {
     id: "7-up",
@@ -961,7 +961,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 23000,
     description: "Nước ngọt 7Up vị chanh có ga tươi mát lạnh.",
-    image: undefined
+    image: "/images/7-up.jpg"
   },
   {
     id: "xa-xi",
@@ -970,7 +970,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 23000,
     description: "Nước ngọt có ga hương xá xị thơm nồng đặc trưng ướp lạnh.",
-    image: undefined
+    image: "/images/coca.jpg"
   },
   {
     id: "tra-khong-do",
@@ -979,7 +979,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 23000,
     description: "Trà xanh đóng chai Không Độ ướp lạnh thanh nhiệt.",
-    image: undefined
+    image: "/images/tra-khong-do.jpg"
   },
   {
     id: "tra-olong-chai",
@@ -988,7 +988,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 23000,
     description: "Trà ô long Tea+ đóng chai thanh tao thơm ngát.",
-    image: undefined
+    image: "/images/tra-khong-do.jpg"
   },
   {
     id: "nuoc-suoi",
@@ -997,7 +997,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 15000,
     description: "Nước suối tinh khiết đóng chai ướp lạnh tiện lợi.",
-    image: undefined
+    image: "/images/nuoc-suoi.jpg"
   },
   {
     id: "hat-dua",
@@ -1006,7 +1006,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 70000,
     description: "Hạt dưa đỏ rang giòn thơm bùi nhâm nhi cùng câu chuyện bạn bè (đĩa lớn).",
-    image: undefined
+    image: "/images/hat-dua.jpg"
   },
   {
     id: "hat-huong-duong",
@@ -1015,7 +1015,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 15000,
     description: "Hạt hướng dương rang mộc thơm bùi giòn rụm nhâm nhi bên tách cà phê.",
-    image: undefined
+    image: "/images/hat-huong-duong.jpg"
   },
   {
     id: "ca-phe-hat",
@@ -1024,7 +1024,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 300000,
     description: "Cà phê Robusta & Arabica nguyên hạt rang mộc thượng hạng Ông Mập (Gói 1kg).",
-    image: "/images/coffee-den-da.jpg"
+    image: "/images/ca-phe-hat.jpg"
   },
   {
     id: "tran-chau-them",
@@ -1033,7 +1033,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 7000,
     description: "Topping trân châu dẻo dai giòn sần sật thêm vào mọi món trà hoặc sữa.",
-    image: undefined
+    image: "/images/tran-chau-them.jpg"
   },
   {
     id: "them-khac",
@@ -1042,7 +1042,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Đóng Chai & Ăn Vặt",
     price: 7000,
     description: "Topping thêm theo yêu cầu đặc biệt của khách hàng.",
-    image: undefined
+    image: "/images/tran-chau-them.jpg"
   },
   {
     id: "khan-lanh",
@@ -1119,7 +1119,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Mang Đi (Take Away)",
     price: 25000,
     description: "Cà phê sữa đá mang đi chuẩn vị béo thơm, đồng hành cùng bạn tới công sở.",
-    image: "/images/coffee-sua-barista.jpg",
+    image: "/images/takeaway-cup.jpg",
     isBestSeller: true
   },
   {
@@ -1129,7 +1129,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Mang Đi (Take Away)",
     price: 30000,
     description: "Bạc xỉu thơm ngậy đóng ly nắp cầu tiện lợi mang đi làm, đi học.",
-    image: "/images/coffee-bac-xiu.jpg"
+    image: "/images/takeaway-cup.jpg"
   },
   {
     id: "cf-sua-lac-mang-di",
@@ -1138,7 +1138,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Mang Đi (Take Away)",
     price: 30000,
     description: "Cà phê sữa lắc tạo bọt mịn màng bồng bềnh, thơm nức mũi đóng ly mang đi.",
-    image: "/images/coffee-sua-barista.jpg"
+    image: "/images/cf-sua-lac.jpg"
   },
   {
     id: "sua-tuoi-cf-mang-di",
@@ -1147,7 +1147,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Mang Đi (Take Away)",
     price: 30000,
     description: "Sữa tươi thanh trùng mát lạnh kết hợp cà phê phin đậm vị đóng ly mang đi tiện lợi.",
-    image: "/images/coffee-sua-barista.jpg",
+    image: "/images/takeaway-cup.jpg",
     isNew: true
   },
   {
@@ -1176,7 +1176,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryName: "Mang Đi (Take Away)",
     price: 32000,
     description: "Nước ép cà rốt tươi nguyên chất đóng ly mang đi bổ sung vitamin A cho ngày làm việc.",
-    image: "/images/nuoc-ep-cam.jpg",
+    image: "/images/nuoc-ep-ca-rot.jpg",
     isNew: true
   }
 ];
